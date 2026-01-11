@@ -93,7 +93,7 @@ const About: React.FC = () => {
       {/* Download CV */}
       {/* Download CV */}
       <a
-        href="/assets/Leon Hauck Profile.pdf"
+        href="/assets/Leon Hauck - Profile.pdf"
         target="_blank"
         rel="noopener noreferrer"
         download="Leon_Hauck_Resume.pdf"
