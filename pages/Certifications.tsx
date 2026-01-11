@@ -28,7 +28,7 @@ const certificates: Certificate[] = [
     },
 ];
 
-const Certificates: React.FC = () => {
+const Certifications: React.FC = () => {
     return (
         <div className="max-w-4xl mx-auto px-6 pt-12 animate-in fade-in duration-700">
             <div>
@@ -79,4 +79,4 @@ const Certificates: React.FC = () => {
     );
 };
 
-export default Certificates;
+export default Certifications;
