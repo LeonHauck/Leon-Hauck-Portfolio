@@ -29,10 +29,10 @@ const Home: React.FC = () => {
         <div className="flex flex-col gap-4 mb-4 items-start">
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-br from-primary/50 to-transparent rounded-lg opacity-70 blur-sm"></div>
-            <div className="relative h-28 w-28 rounded-lg overflow-hidden bg-surface-dark border border-white/10 shadow-2xl">
+            <div className="relative h-28 w-28 rounded-lg overflow-hidden bg-surface-dark border border-white/10 shadow-2xl profile-image-container">
               <img
                 alt="Developer Portrait"
-                className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-500 no-invert"
                 src="/assets/leon-profile.jpg"
               />
             </div>

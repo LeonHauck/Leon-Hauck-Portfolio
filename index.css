@@ -1,0 +1,11 @@
+/* Impede que navegadores invertam cores de imagens no modo escuro forçado */
+img, 
+.no-invert {
+    color-scheme: only light !important;
+    forced-color-adjust: none !important;
+}
+
+/* Garante que o fundo não afete a visualização como raio-x */
+.profile-image-container {
+    isolation: isolate;
+}

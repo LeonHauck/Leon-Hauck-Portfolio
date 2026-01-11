@@ -33,11 +33,11 @@ const About: React.FC = () => {
       {/* Profile Header */}
       <section className="flex flex-col items-center gap-6">
         <div className="relative group">
-          <div className="size-32 rounded-lg overflow-hidden border-2 border-primary/20 bg-white dark:bg-surface-dark shadow-xl">
+          <div className="size-32 rounded-lg overflow-hidden border-2 border-primary/20 bg-white dark:bg-surface-dark shadow-xl profile-image-container">
             <img
               src="/assets/leon-profile.jpg"
               alt="Leon Hauck Profile"
-              className="w-full h-full object-cover brightness-110 contrast-110"
+              className="w-full h-full object-cover brightness-110 contrast-110 no-invert"
             />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-white dark:bg-background-dark p-1 rounded-full">
