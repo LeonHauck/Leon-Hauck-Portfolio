@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
       isFeatured: true,
       version: 'v3.0.0',
       updatedAt: 'Hoje',
-      githubUrl: 'https://github.com/leonhauck',
+      githubUrl: 'https://github.com/LeonHauck/Leon-Hauck-Portfolio',
       gallery: [
         '/assets/Portfolio imagem.jpg',
         '/assets/Foto da Pagina Projetos.jpg',
