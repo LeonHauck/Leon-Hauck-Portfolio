@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     { name: 'HTML', icon: 'html' },
     { name: 'CSS', icon: 'css' },
     { name: 'React', icon: 'deployed_code' },
-    { name: 'TypeScript', icon: 'terminal' },
+    { name: 'TypeScript', icon: 'data_object' },
     { name: 'Python', icon: 'terminal' },
     { name: 'SQL', icon: 'database' },
     { name: 'Angular', icon: 'code' },
@@ -79,12 +79,11 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Tech Stack Ticker */}
-        <div className="w-full overflow-hidden mask-gradient-x">
-          <div className="animate-marquee gap-3 no-scrollbar pb-2">
-            {[...techStack, ...techStack, ...techStack].map((tech, index) => (
-              <span key={`${tech.name}-${index}`} className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-surface-dark border border-black/5 dark:border-white/5 rounded text-xs font-medium text-slate-600 dark:text-text-secondary whitespace-nowrap">
-                <span className="material-symbols-outlined text-[16px]">{tech.icon}</span> {tech.name}
+        <div className="w-full overflow-hidden mask-gradient-x mb-8">
+          <div className="animate-marquee gap-3 no-scrollbar py-2">
+            {[...techStack, ...techStack].map((tech, index) => (
+              <span key={`${tech.name}-${index}`} className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-surface-dark border border-black/5 dark:border-white/10 rounded text-xs font-medium text-slate-600 dark:text-text-secondary whitespace-nowrap transition-colors hover:border-primary/30">
+                <span className="material-symbols-outlined text-[16px] text-primary">{tech.icon}</span> {tech.name}
               </span>
             ))}
           </div>

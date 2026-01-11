@@ -46,7 +46,7 @@ const About: React.FC = () => {
         </div>
         <div className="text-center space-y-1">
           <h2 className="text-3xl font-bold tracking-tight">Leon Hauck</h2>
-          <p className="text-primary font-medium tracking-wide uppercase text-sm">Developer</p>
+          <p className="text-primary font-medium tracking-wide uppercase text-sm">Developer & Data Analyst</p>
           <p className="text-slate-500 dark:text-text-secondary text-xs flex items-center justify-center gap-1 mt-2">
             <span className="material-symbols-outlined text-[14px]">location_on</span>
             Juiz de Fora, Brasil
