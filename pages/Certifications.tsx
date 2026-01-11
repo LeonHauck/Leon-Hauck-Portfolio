@@ -12,18 +12,26 @@ interface Certificate {
 const certificates: Certificate[] = [
     {
         id: 1,
-        title: 'Python for Data Science',
-        institution: 'IBM / Coursera',
-        date: '2023',
-        link: '#', // Placeholder link
-        type: 'PDF',
+        title: 'Método Kanban',
+        institution: 'FM2S - Educação e Consultoria',
+        date: '2024',
+        link: '/assets/Certificado -  Método Kanban FM2S.png',
+        type: 'IMAGE',
     },
     {
         id: 2,
-        title: 'Six Sigma White Belt',
-        institution: 'Council for Six Sigma Certification',
-        date: '2023',
-        link: '#',
+        title: 'Six Sigma Black Belt',
+        institution: 'FM2S - Educação e Consultoria',
+        date: '2025',
+        link: '/assets/Certificado -  Lean Six Sigma Black Belt - FM2S.png',
+        type: 'IMAGE',
+    },
+      {
+        id: 3,
+        title: 'OKR - Objetivos e Resultados',
+        institution: 'FM2S - Educação e Consultoria',
+        date: '2025',
+        link: '/assets/Certificado - OKR - Objectives and Key Results - FM2S.png',
         type: 'IMAGE',
     },
 ];
