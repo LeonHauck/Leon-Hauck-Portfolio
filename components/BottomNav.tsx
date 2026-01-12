@@ -1,18 +1,24 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from './LanguageContext';
 
 const BottomNav: React.FC = () => {
+  const { t, language, setLanguage } = useLanguage();
   const location = useLocation();
   const currentPath = location.pathname;
 
   const navItems = [
-    { label: 'INÍCIO', path: '/', icon: 'home' },
-    { label: 'PROJETOS', path: '/projects', icon: 'grid_view' },
-    { label: 'CERTIFICADOS', path: '/certificates', icon: 'workspace_premium' },
-    { label: 'SOBRE', path: '/about', icon: 'person' },
-    { label: 'CONTATO', path: '/contact', icon: 'mail' },
+    { label: t('nav.home'), path: '/', icon: 'home' },
+    { label: t('nav.projects'), path: '/projects', icon: 'grid_view' },
+    { label: t('nav.certificates'), path: '/certificates', icon: 'workspace_premium' },
+    { label: t('nav.about'), path: '/about', icon: 'person' },
+    { label: t('nav.contact'), path: '/contact', icon: 'mail' },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'pt' ? 'en' : 'pt');
+  };
 
   return (
     <nav className="fixed bottom-0 left-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-lg border-t border-black/5 dark:border-white/10 z-50 pb-6 pt-3 px-6 transition-colors duration-300">
@@ -42,6 +48,20 @@ const BottomNav: React.FC = () => {
             </Link>
           );
         })}
+
+        {/* Language Toggle */}
+        <button
+          onClick={toggleLanguage}
+          className="flex flex-col items-center gap-1 group w-16 transition-all text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white"
+        >
+          <div className="w-10 h-1 rounded mb-1 bg-transparent" />
+          <span className="material-symbols-outlined transition-transform duration-300 group-active:scale-90">
+            translate
+          </span>
+          <span className="text-[10px] font-bold tracking-wider uppercase">
+            {language === 'pt' ? 'EN' : 'PT'}
+          </span>
+        </button>
       </div>
     </nav>
   );

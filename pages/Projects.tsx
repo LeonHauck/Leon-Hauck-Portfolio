@@ -1,43 +1,26 @@
 
 import React, { useState } from 'react';
 import { Project } from '../types';
+import { useLanguage } from '../components/LanguageContext';
 
 const Projects: React.FC = () => {
-  const [filter, setFilter] = useState('Todos');
+  const { t } = useLanguage();
+  const [filter, setFilter] = useState(t('projects.categories.all'));
   const [selectedGallery, setSelectedGallery] = useState<string[] | null>(null);
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
-  const projects: Project[] = [
-    {
-      id: '1',
-      title: 'Projeto de Portfolio',
-      category: 'Web',
-      description: 'Desenvolvimento de um hub central para hospedar e organizar meu ecossistema de projetos de software.',
-      tech: ['React', 'TypeScript', 'HTML', 'Vite', 'Tailwind CSS'],
-      imageUrl: '/assets/Portfolio imagem.jpg',
-      isFeatured: true,
-      version: 'v3.0.0',
-      updatedAt: 'Hoje',
-      githubUrl: 'https://github.com/LeonHauck/Leon-Hauck-Portfolio',
-      gallery: [
-        '/assets/Portfolio imagem.jpg',
-        '/assets/Foto da Pagina Projetos.jpg',
-        '/assets/Foto da Pagina Sobre.jpg',
-        '/assets/Foto da Pagina Contato.jpg',
-      ]
-    }
-  ];
+  const projects: Project[] = t('projects.items');
 
-  const categories = ['Todos', 'Mobile', 'Web', 'Backend', 'Design'];
-  const filteredProjects = filter === 'Todos' ? projects : projects.filter(p => p.category === filter);
+  const categories = [t('projects.categories.all'), t('projects.categories.mobile'), t('projects.categories.web'), t('projects.categories.backend'), t('projects.categories.design')];
+  const filteredProjects = filter === t('projects.categories.all') ? projects : projects.filter(p => p.category === filter);
 
   return (
     <div className="pt-6 px-4 max-w-lg mx-auto md:max-w-2xl">
       <header className="mb-6">
         <div className="flex items-center mb-2">
           <div>
-            <h1 className="text-2xl font-bold tracking-tight">Meus Projetos</h1>
-            <p className="text-xs text-slate-500 dark:text-gray-400 font-medium uppercase tracking-wide">Portfólio v3.0</p>
+            <h1 className="text-2xl font-bold tracking-tight">{t('projects.title')}</h1>
+            <p className="text-xs text-slate-500 dark:text-gray-400 font-medium uppercase tracking-wide">{t('projects.version')}</p>
           </div>
         </div>
 
@@ -73,7 +56,7 @@ const Projects: React.FC = () => {
               <div className="absolute bottom-4 left-4 z-20">
                 <div className="flex gap-2 mb-1">
                   {project.isFeatured && (
-                    <span className="bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Featured</span>
+                    <span className="bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">{t('projects.featured')}</span>
                   )}
                   <span className="bg-black/40 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase border border-white/10">{project.category}</span>
                 </div>
@@ -110,7 +93,7 @@ const Projects: React.FC = () => {
                       onClick={() => setSelectedGallery(project.gallery!)}
                       className="flex items-center justify-center h-8 px-3 gap-1 rounded bg-primary text-white text-[10px] font-bold uppercase hover:bg-primary-light transition-colors"
                     >
-                      <span>Ver Fotos</span>
+                      <span>{t('projects.viewPhotos')}</span>
                       <span className="material-symbols-outlined text-[14px]">grid_view</span>
                     </button>
                   ) : null}
@@ -126,7 +109,7 @@ const Projects: React.FC = () => {
         <div className="fixed inset-0 z-[9998] bg-black/60 backdrop-blur-md flex items-center justify-center p-4 md:p-6 animate-in fade-in duration-300">
           <div className="bg-white dark:bg-surface-dark w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl relative animate-in zoom-in-95 duration-300">
             <div className="p-6 border-b border-black/5 dark:border-white/5 flex items-center justify-between">
-              <h3 className="text-lg font-bold">Galeria do Projeto</h3>
+              <h3 className="text-lg font-bold">{t('projects.galleryTitle')}</h3>
               <button
                 onClick={() => setSelectedGallery(null)}
                 className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors"

@@ -10,14 +10,13 @@ import Certifications from './pages/Certifications';
 
 import MatrixBackground from './components/MatrixBackground';
 
-const App: React.FC = () => {
-  const location = useLocation();
+import { LanguageProvider, useLanguage } from './components/LanguageContext';
 
-  const matrixWords = [
-    'PYTHON', 'SQL', 'SIX SIGMA', 'ENGENHARIA DE PROMPT', 'INTELIGENCIA ARTIFICIAL',
-    'NEGOCIACAO', 'LIDERANCA', 'AUTOMACAO DE PROCESSOS', 'RPA', 'DATA',
-    'ANALYSIS', 'LOGIC', 'CODE', 'LEAN'
-  ];
+const AppContent: React.FC = () => {
+  const location = useLocation();
+  const { t } = useLanguage();
+
+  const matrixWords = t('matrix');
 
   return (
     <div className="flex flex-col min-h-screen relative">
@@ -33,6 +32,14 @@ const App: React.FC = () => {
       </main>
       <BottomNav />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 };
 

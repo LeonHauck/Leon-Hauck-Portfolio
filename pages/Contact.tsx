@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
+import { useLanguage } from '../components/LanguageContext';
 
 const Contact: React.FC = () => {
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isCopied, setIsCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,7 +24,7 @@ const Contact: React.FC = () => {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `Novo contato de: ${formData.name}`,
+          _subject: language === 'pt' ? `Novo contato de: ${formData.name}` : `New contact from: ${formData.name}`,
           _template: "table",
           _captcha: "false"
         })
@@ -33,7 +35,7 @@ const Contact: React.FC = () => {
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
       console.error("Erro ao enviar email:", error);
-      alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente ou entre em contato diretamente pelo email.");
+      alert(t('contact.form.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -48,28 +50,28 @@ const Contact: React.FC = () => {
   return (
     <div className="w-full max-w-md mx-auto px-6 pt-12">
       <header className="mb-10">
-        <h1 className="text-4xl font-bold tracking-tight mb-4 leading-none">Vamos conversar.</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4 leading-none">{t('contact.title')}</h1>
         <p className="text-slate-500 dark:text-text-secondary text-base font-light leading-relaxed">
-          Tem um projeto em mente ou quer apenas trocar uma ideia sobre tecnologia? Preencha o formulário ou me encontre nas redes.
+          {t('contact.subtitle')}
         </p>
       </header>
 
       {isSuccess ? (
         <div className="mb-12 p-6 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-center animate-fade-in">
           <span className="material-symbols-outlined text-green-500 text-4xl mb-2">check_circle</span>
-          <h3 className="text-lg font-bold text-green-700 dark:text-green-300 mb-1">Mensagem Enviada!</h3>
-          <p className="text-green-600 dark:text-green-400 text-sm">Obrigado pelo contato. Responderei em breve.</p>
+          <h3 className="text-lg font-bold text-green-700 dark:text-green-300 mb-1">{t('contact.form.successTitle')}</h3>
+          <p className="text-green-600 dark:text-green-400 text-sm">{t('contact.form.successMessage')}</p>
           <button
             onClick={() => setIsSuccess(false)}
             className="mt-4 text-sm font-medium text-green-700 dark:text-green-300 hover:underline"
           >
-            Enviar outra mensagem
+            {t('contact.form.sendAnother')}
           </button>
         </div>
       ) : (
         <form className="space-y-6 mb-12" onSubmit={handleSubmit}>
           <div className="group">
-            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="name">Nome</label>
+            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="name">{t('contact.form.name')}</label>
             <div className="relative">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 group-focus-within:text-primary transition-colors">
                 <span className="material-symbols-outlined text-[20px]">person</span>
@@ -78,7 +80,7 @@ const Contact: React.FC = () => {
                 required
                 className="block w-full rounded bg-slate-50 dark:bg-surface-dark border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary pl-10 pr-4 py-3 sm:text-sm transition-all"
                 id="name"
-                placeholder="Como devo te chamar?"
+                placeholder={t('contact.form.namePlaceholder')}
                 type="text"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -87,7 +89,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="group">
-            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="email">Email</label>
+            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="email">{t('contact.form.email')}</label>
             <div className="relative">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 group-focus-within:text-primary transition-colors">
                 <span className="material-symbols-outlined text-[20px]">alternate_email</span>
@@ -96,7 +98,7 @@ const Contact: React.FC = () => {
                 required
                 className="block w-full rounded bg-slate-50 dark:bg-surface-dark border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary pl-10 pr-4 py-3 sm:text-sm transition-all"
                 id="email"
-                placeholder="seu@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -105,12 +107,12 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="group">
-            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="message">Mensagem</label>
+            <label className="block text-slate-500 dark:text-text-secondary text-[10px] font-bold uppercase tracking-widest mb-2" htmlFor="message">{t('contact.form.message')}</label>
             <textarea
               required
               className="block w-full rounded bg-slate-50 dark:bg-surface-dark border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary p-4 sm:text-sm transition-all resize-none"
               id="message"
-              placeholder="Conte-me sobre seu projeto..."
+              placeholder={t('contact.form.messagePlaceholder')}
               rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -125,11 +127,11 @@ const Contact: React.FC = () => {
             {isSubmitting ? (
               <>
                 <span className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full"></span>
-                <span>Enviando...</span>
+                <span>{t('contact.form.sending')}</span>
               </>
             ) : (
               <>
-                <span>Enviar Mensagem</span>
+                <span>{t('contact.form.send')}</span>
                 <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
               </>
             )}
@@ -138,7 +140,7 @@ const Contact: React.FC = () => {
       )}
 
       <div className="border-t border-black/5 dark:border-zinc-800 pt-8 mb-8">
-        <p className="text-slate-400 dark:text-text-secondary text-[10px] uppercase tracking-widest text-center mb-6">Ou conecte-se via</p>
+        <p className="text-slate-400 dark:text-text-secondary text-[10px] uppercase tracking-widest text-center mb-6">{t('contact.connect')}</p>
         <div className="grid grid-cols-2 gap-3">
           <a href="https://github.com/leonhauck" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center p-4 rounded bg-slate-50 dark:bg-surface-dark border border-transparent hover:border-primary/20 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-all group">
             <span className="material-symbols-outlined text-2xl mb-2 group-hover:scale-110 transition-transform">code</span>
@@ -155,7 +157,7 @@ const Contact: React.FC = () => {
             <div className="flex items-center gap-3">
               <span className="material-symbols-outlined text-2xl">mail</span>
               <div className="text-left">
-                <span className="block text-sm font-medium">{isCopied ? 'Copiado!' : 'Copiar Email'}</span>
+                <span className="block text-sm font-medium">{isCopied ? t('contact.copied') : t('contact.copyEmail')}</span>
                 <span className="block text-[10px] text-slate-500 dark:text-text-secondary">leonhauck98@gmail.com</span>
               </div>
             </div>
