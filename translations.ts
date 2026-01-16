@@ -68,6 +68,7 @@ export const translations = {
                 web: 'Web',
                 backend: 'Backend',
                 design: 'Design',
+                data: 'Dados',
             },
             featured: 'Destaque',
             viewPhotos: 'Ver Fotos',
@@ -82,13 +83,32 @@ export const translations = {
                     imageUrl: '/assets/Portfolio imagem.jpg',
                     isFeatured: true,
                     version: 'v3.0.0',
-                    updatedAt: 'Hoje',
+                    updatedAt: '11/01/2026',
                     githubUrl: 'https://github.com/LeonHauck/Leon-Hauck-Portfolio',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7416200602566905856/',
                     gallery: [
                         '/assets/Portfolio imagem.jpg',
                         '/assets/Foto da Pagina Projetos.jpg',
                         '/assets/Foto da Pagina Sobre.jpg',
                         '/assets/Foto da Pagina Contato.jpg',
+                    ]
+                },
+                {
+                    id: '2',
+                    title: 'Monitor de preços',
+                    category: 'Dados',
+                    description: 'O projeto envolve o armazenamento dos preços coletados em um banco de dados SQLite e, posteriormente, a análise desses dados para identificar tendências, comparar preços e gerar insights.',
+                    tech: ['Python', 'SQL', 'HTML'],
+                    imageUrl: '/assets/Hub inicial.png',
+                    isFeatured: false,
+                    version: 'v3.0',
+                    updatedAt: '14/01/2026',
+                    githubUrl: 'https://github.com/LeonHauck/monitor-de-precos',
+                    linkedinUrl: '#',
+                    gallery: [
+                        '/assets/Hub inicial.png',
+                        '/assets/Gráfico de alteração de preços.png',
+                        '/assets/Registros de hora e data com o preço.png',
                     ]
                 }
             ]
@@ -331,6 +351,7 @@ export const translations = {
                 web: 'Web',
                 backend: 'Backend',
                 design: 'Design',
+                data: 'Data',
             },
             featured: 'Featured',
             viewPhotos: 'View Photos',
@@ -347,11 +368,30 @@ export const translations = {
                     version: 'v3.0.0',
                     updatedAt: 'Today',
                     githubUrl: 'https://github.com/LeonHauck/Leon-Hauck-Portfolio',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7416200602566905856/',
                     gallery: [
                         '/assets/Portfolio imagem.jpg',
                         '/assets/Foto da Pagina Projetos.jpg',
                         '/assets/Foto da Pagina Sobre.jpg',
                         '/assets/Foto da Pagina Contato.jpg',
+                    ]
+                },
+                {
+                    id: '2',
+                    title: 'Price Monitor',
+                    category: 'Data',
+                    description: 'The project involves storing collected prices in a SQLite database and subsequently analyzing this data to identify trends, compare prices, and generate insights.',
+                    tech: ['Python', 'SQL', 'HTML'],
+                    imageUrl: '/assets/Hub inicial.png',
+                    isFeatured: false,
+                    version: 'v3.0',
+                    updatedAt: '14/01/2026',
+                    githubUrl: 'https://github.com/LeonHauck/monitor-de-precos',
+                    linkedinUrl: '#',
+                    gallery: [
+                        '/assets/Hub inicial.png',
+                        '/assets/Gráfico de alteração de preços.png',
+                        '/assets/Registros de hora e data com o preço.png',
                     ]
                 }
             ]

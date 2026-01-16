@@ -12,6 +12,7 @@ export interface Project {
   status?: 'active' | 'legacy' | 'research';
   liveUrl?: string;
   githubUrl?: string;
+  linkedinUrl?: string;
   gallery?: string[];
 }
 
