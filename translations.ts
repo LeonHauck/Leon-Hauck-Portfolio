@@ -104,7 +104,7 @@ export const translations = {
                     version: 'v3.0',
                     updatedAt: '14/01/2026',
                     githubUrl: 'https://github.com/LeonHauck/monitor-de-precos',
-                    linkedinUrl: '#',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7417906038307393536/',
                     gallery: [
                         '/assets/Hub inicial.png',
                         '/assets/Gráfico de alteração de preços.png',
