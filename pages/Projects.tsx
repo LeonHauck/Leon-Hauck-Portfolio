@@ -129,13 +129,33 @@ const Projects: React.FC = () => {
             </div>
 
             <div className="p-6 grid grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto no-scrollbar">
-              {selectedGallery.map((img, idx) => (
+              {selectedGallery.map((media, idx) => (
                 <div
                   key={idx}
-                  onClick={() => setFullscreenImage(img)}
-                  className="aspect-video rounded-lg overflow-hidden border border-black/5 dark:border-white/5 cursor-zoom-in group relative"
+                  onClick={() => setFullscreenImage(media)}
+                  className="aspect-video rounded-lg overflow-hidden border border-black/5 dark:border-white/5 cursor-zoom-in group relative bg-black/5"
                 >
-                  <img src={img} className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500" alt="Thumbnail" />
+                  {media.toLowerCase().endsWith('.mp4') ? (
+                    <div className="w-full h-full relative">
+                      <video
+                        src={media}
+                        className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500"
+                        muted
+                        loop
+                        onMouseOver={(e) => (e.target as HTMLVideoElement).play()}
+                        onMouseOut={(e) => {
+                          const v = e.target as HTMLVideoElement;
+                          v.pause();
+                          v.currentTime = 0;
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <span className="material-symbols-outlined text-white text-4xl drop-shadow-lg opacity-80 group-hover:opacity-100 transition-opacity">play_circle</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <img src={media} className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500" alt="Thumbnail" />
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <span className="material-symbols-outlined text-white opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all">fullscreen</span>
                   </div>
@@ -159,12 +179,22 @@ const Projects: React.FC = () => {
             <span className="material-symbols-outlined text-[32px]">close</span>
           </button>
 
-          <img
-            src={fullscreenImage}
-            alt="Fullscreen"
-            className="max-w-full max-h-full object-contain rounded shadow-2xl animate-in zoom-in-90 duration-300"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {fullscreenImage.toLowerCase().endsWith('.mp4') ? (
+            <video
+              src={fullscreenImage}
+              controls
+              autoPlay
+              className="max-w-full max-h-full rounded shadow-2xl animate-in zoom-in-90 duration-300"
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            <img
+              src={fullscreenImage}
+              alt="Fullscreen"
+              className="max-w-full max-h-full object-contain rounded shadow-2xl animate-in zoom-in-90 duration-300"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </div>
       )}
     </div>

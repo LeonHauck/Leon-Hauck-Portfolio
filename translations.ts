@@ -110,6 +110,29 @@ export const translations = {
                         '/assets/Gráfico de alteração de preços.png',
                         '/assets/Registros de hora e data com o preço.png',
                     ]
+                },
+                {
+                    id: '3',
+                    title: 'Giro de Itens v1.0',
+                    category: 'Web',
+                    description: 'Dashboard inteligente para controle de estoque e previsão de demanda. Inclui algoritmo de reposição, gráficos interativos com Chart.js, gestão de acessos (RBAC) e exportação de relatórios profissional.',
+                    tech: ['Vanilla JS', 'Chart.js', 'HTML', 'CSS', 'Excel/PDF Export'],
+                    imageUrl: '/assets/Tela de Login.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '26/01/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Projeto-Site-setembro-2025',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Login - Giro de Itens.mp4',
+                        '/assets/Tela de Login.png',
+                        '/assets/Tela de Cadastro de itens.png',
+                        '/assets/Tela de Gráficos.png',
+                        '/assets/Tela de Sugestão de pedidos.png',
+                        '/assets/Tela de Tabela.png',
+                        '/assets/Tela de Relatórios.png',
+                        '/assets/Relatório PDF.png',
+                    ]
                 }
             ]
         },
@@ -392,6 +415,29 @@ export const translations = {
                         '/assets/Hub inicial.png',
                         '/assets/Gráfico de alteração de preços.png',
                         '/assets/Registros de hora e data com o preço.png',
+                    ]
+                },
+                {
+                    id: '3',
+                    title: 'Item Turnover v1.0',
+                    category: 'Web',
+                    description: 'Intelligent dashboard for inventory control and demand forecasting. Includes replenishment algorithm, interactive charts with Chart.js, RBAC access management, and professional report export.',
+                    tech: ['Vanilla JS', 'Chart.js', 'HTML', 'CSS', 'Excel/PDF Export'],
+                    imageUrl: '/assets/Hub inicial.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '01/26/2026',
+                    githubUrl: 'https://github.com/LeonHauck/',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Login - Giro de Itens.mp4',
+                        '/assets/Tela de Login.png',
+                        '/assets/Tela de Cadastro de itens.png',
+                        '/assets/Tela de Gráficos.png',
+                        '/assets/Tela de Sugestão de pedidos.png',
+                        '/assets/Tela de Tabela.png',
+                        '/assets/Tela de Relatórios.png',
+                        '/assets/Relatório PDF.png',
                     ]
                 }
             ]
