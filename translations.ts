@@ -279,6 +279,15 @@ export const translations = {
                     link: '/assets/Certificado T&D Educação Corporativa Conquer.jpeg',
                     type: 'IMAGE',
                 },
+
+                {
+                    id: 18,
+                    title: 'Curso Completo de Macros e VBA',
+                    institution: 'Udemy',
+                    date: '2026',
+                    link: '/assets/Certificado Curso Completo de Macros e VBA.jpg',
+                    type: 'IMAGE',
+                },
             ]
         },
         contact: {
