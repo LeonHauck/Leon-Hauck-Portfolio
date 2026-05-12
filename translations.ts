@@ -13,7 +13,7 @@ export const translations = {
         home: {
             portfolio: 'PORTFÓLIO',
             title: 'Leon Hauck',
-            subtitle: 'Desenvolvedor e Analista de dados. Transformando lógica complexa em experiências fluidas e eficientes.',
+            subtitle: 'Desenvolvedor e Analista de dados. Especialista em automação de processos e inteligência de dados estratégica.',
             skills: {
                 blackBelt: 'Black Belt Lean Six Sigma',
                 automation: 'Automação de Processos',
@@ -28,30 +28,37 @@ export const translations = {
             est: 'EST. 2026',
         },
         about: {
-            role: 'Desenvolvedor & Analista de Dados',
+            role: 'Analista de Dados & Desenvolvedor de Software',
             profile: 'Perfil',
-            bio: 'Analista de Dados em transição para áreas estratégicas de tecnologia, com ênfase em Inteligência Artificial Generativa, Engenharia de Prompts, SQL e APIs.\n\nTenho mais de sete anos de dedicação intensa ao estudo de tecnologia, com competências consolidadas em Python, Power BI, Excel Avançado, SQL. Atualmente curso Análise e Desenvolvimento de Sistemas, o que complementa minha formação prática e teórica.',
+            bio: 'Analista de Dados e Desenvolvedor focado em transformar dados em decisões estratégicas e processos manuais em fluxos automatizados. Com sólida expertise em IA Generativa, Banco de Dados e Python, atuo no desenvolvimento de soluções de software personalizadas e dashboards de alta performance.\n\nTenho mais de sete anos de dedicação à tecnologia, com competências consolidadas em Automação de Processos, IA Generativa, Banco de Dados, APIs e Python. Atualmente curso Análise e Desenvolvimento de Sistemas, unindo visão analítica de negócio com execução técnica de ponta.',
             journey: 'Jornada',
             downloadCvPt: 'BAIXAR CURRÍCULO (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
             experiences: [
                 {
                     id: '1',
-                    role: 'Analista Comercial Junior',
-                    company: 'Grupo Bahamas S/A',
-                    period: '2025 — Presente',
-                    description: 'Pesquisar mercado e analisar dados para identificar o potencial de vendas, manter o sistema de CRM atualizado, gerenciar e alcançar metas de satisfação e receita, Elaborar projeções de vendas e relatórios de tendências mercadológicas.',
+                    role: 'Analista Comercial & Business Intelligence (BI/Dev)',
+                    company: 'HiperRoll Embalagens LTDA',
+                    period: '2026 — Presente',
+                    description: 'Desenvolvimento de dashboards Power BI e KPIs, automação de rotinas comerciais, análise técnica via Scanntech para inteligência de mercado e otimização de processos através de software.',
                     isCurrent: true
                 },
                 {
                     id: '2',
+                    role: 'Analista Comercial Junior',
+                    company: 'Grupo Bahamas S/A',
+                    period: '2025 — 2026',
+                    description: 'Pesquisar mercado e analisar dados para identificar o potencial de vendas, manter o sistema de CRM atualizado, gerenciar e alcançar metas de satisfação e receita, Elaborar projeções de vendas e relatórios de tendências mercadológicas.',
+                },
+                {
+                    id: '3',
                     role: 'Auxiliar Logistico',
                     company: 'Grupo Bahamas S/A',
                     period: '2024 — 2025',
                     description: 'Analisar os processos de toda a operação logística, identificando pontos em que podem ser melhorados.'
                 },
                 {
-                    id: '3',
+                    id: '4',
                     role: 'Designer Gráfico',
                     company: 'Freelance',
                     period: '2016 — 2023',
@@ -328,7 +335,7 @@ export const translations = {
         home: {
             portfolio: 'PORTFOLIO',
             title: 'Leon Hauck',
-            subtitle: 'Developer and Data Analyst. Transforming complex logic into fluid and efficient experiences.',
+            subtitle: 'Developer and Data Analyst. Specialist in process automation and strategic data intelligence.',
             skills: {
                 blackBelt: 'Lean Six Sigma Black Belt',
                 automation: 'Process Automation',
@@ -343,30 +350,37 @@ export const translations = {
             est: 'EST. 2026',
         },
         about: {
-            role: 'Developer & Data Analyst',
+            role: 'Data Analyst & Software Developer',
             profile: 'Profile',
-            bio: 'Data Analyst transitioning into strategic technology areas, with an emphasis on Generative AI, Prompt Engineering, SQL, and APIs.\n\nI have over seven years of intense dedication to the study of technology, with consolidated skills in Python, Power BI, Advanced Excel, SQL. I am currently studying Systems Analysis and Development, which complements my practical and theoretical training.',
+            bio: 'Data Analyst and Developer focused on transforming data into strategic decisions and manual processes into automated workflows. With solid expertise in Generative AI, Databases, and Python, I develop custom software solutions and high-performance dashboards.\n\nI have over seven years of dedication to technology, with consolidated skills in Process Automation, Generative AI, Databases, APIs, and Python. I am currently studying Systems Analysis and Development, combining analytical business vision with cutting-edge technical execution.',
             journey: 'Journey',
             downloadCvPt: 'DOWNLOAD CV (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
             experiences: [
                 {
                     id: '1',
-                    role: 'Junior Business Analyst',
-                    company: 'Grupo Bahamas S/A',
-                    period: '2025 — Present',
-                    description: 'Research the market and analyze data to identify sales potential, maintain the CRM system up to date, manage and meet satisfaction and revenue goals, develop sales projections and market trend reports.',
+                    role: 'Sales & Business Intelligence Analyst (BI/Dev)',
+                    company: 'HiperRoll Embalagens LTDA',
+                    period: '2026 — Present',
+                    description: 'Development of Power BI dashboards and KPIs, automation of commercial routines, technical analysis via Scanntech for market intelligence, and process optimization through software.',
                     isCurrent: true
                 },
                 {
                     id: '2',
+                    role: 'Junior Business Analyst',
+                    company: 'Grupo Bahamas S/A',
+                    period: '2025 — 2026',
+                    description: 'Research the market and analyze data to identify sales potential, maintain the CRM system up to date, manage and meet satisfaction and revenue goals, develop sales projections and market trend reports.',
+                },
+                {
+                    id: '3',
                     role: 'Logistics Assistant',
                     company: 'Grupo Bahamas S/A',
                     period: '2024 — 2025',
                     description: 'Analyze logistics operation processes, identifying areas for improvement.'
                 },
                 {
-                    id: '3',
+                    id: '4',
                     role: 'Graphic Designer',
                     company: 'Freelance',
                     period: '2016 — 2023',
