@@ -129,7 +129,7 @@ export const translations = {
                     version: 'v1.0.0',
                     updatedAt: '26/01/2026',
                     githubUrl: 'https://github.com/LeonHauck/Projeto-Site-setembro-2025',
-                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7422251084938706944/',
                     gallery: [
                         '/assets/Login - Giro de Itens.mp4',
                         '/assets/Tela de Login.png',
@@ -470,7 +470,7 @@ export const translations = {
                     version: 'v1.0.0',
                     updatedAt: '01/26/2026',
                     githubUrl: 'https://github.com/LeonHauck/',
-                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7422251084938706944/',
                     gallery: [
                         '/assets/Login - Giro de Itens.mp4',
                         '/assets/Tela de Login.png',
