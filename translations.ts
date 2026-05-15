@@ -140,6 +140,25 @@ export const translations = {
                         '/assets/Tela de Relatórios.png',
                         '/assets/Relatório PDF.png',
                     ]
+                },
+                {
+                    id: '4',
+                    title: 'Projeto: Rick and Morty',
+                    category: 'Web',
+                    description: 'Este projeto é uma aplicação web interativa que consome dados em tempo real da The Rick and Morty API para renderizar os cards dos personagens do desenho de forma 100% dinâmica. O desenvolvimento cumpre os requisitos do desafio acadêmico focado em estruturação de interfaces nativas (sem frameworks), comunicação assíncrona e manipulação da árvore do DOM.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'REST API'],
+                    imageUrl: '/assets/Rick_and_Morty_1.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '15/05/2026',
+                    githubUrl: 'https://github.com/LeonHauck/rick-and-morty-project',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Rick_and_Morty_1.png',
+                        '/assets/Rick_and_Morty_2.png',
+                        '/assets/Rick_and_Morty_3.png',
+                        '/assets/Rick_and_Morty_4.png',
+                    ]
                 }
             ]
         },
@@ -461,6 +480,25 @@ export const translations = {
                         '/assets/Tela de Tabela.png',
                         '/assets/Tela de Relatórios.png',
                         '/assets/Relatório PDF.png',
+                    ]
+                },
+                {
+                    id: '4',
+                    title: 'Rick and Morty Project',
+                    category: 'Web',
+                    description: 'This project is an interactive web application that consumes real-time data from The Rick and Morty API to render character cards from the show 100% dynamically. The development fulfills the requirements of the academic challenge focused on structuring native interfaces (no frameworks), asynchronous communication, and Document Object Model (DOM) manipulation.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'REST API'],
+                    imageUrl: '/assets/Rick_and_Morty_1.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '05/15/2026',
+                    githubUrl: 'https://github.com/LeonHauck/rick-and-morty-project',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Rick_and_Morty_1.png',
+                        '/assets/Rick_and_Morty_2.png',
+                        '/assets/Rick_and_Morty_3.png',
+                        '/assets/Rick_and_Morty_4.png',
                     ]
                 }
             ]
