@@ -159,6 +159,24 @@ export const translations = {
                         '/assets/Rick_and_Morty_3.png',
                         '/assets/Rick_and_Morty_4.png',
                     ]
+                },
+                {
+                    id: '5',
+                    title: 'UniFECAF Flix - API RESTful',
+                    category: 'Backend',
+                    description: 'Desenvolvimento de uma API RESTful para uma plataforma de filmes como projeto acadêmico. Construída com Node.js, Express, MySQL e Prisma ORM, contemplando endpoints para listagem, busca por ID e filtragem de filmes.',
+                    tech: ['Node.js', 'Express', 'MySQL', 'Prisma', 'TypeScript'],
+                    imageUrl: '/assets/unifecaf_flix.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '17/05/2026',
+                    githubUrl: 'https://github.com/LeonHauck/unifecaf_flix',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/unifecaf_flix.png',
+                        '/assets/unifecaf_flix2.png',
+                        '/assets/unifecaf_flix3.png',
+                    ]
                 }
             ]
         },
@@ -499,6 +517,24 @@ export const translations = {
                         '/assets/Rick_and_Morty_2.png',
                         '/assets/Rick_and_Morty_3.png',
                         '/assets/Rick_and_Morty_4.png',
+                    ]
+                },
+                {
+                    id: '5',
+                    title: 'UniFECAF Flix - API RESTful',
+                    category: 'Backend',
+                    description: 'Development of a RESTful API for a movie platform as an academic project. Built with Node.js, Express, MySQL, and Prisma ORM, including endpoints for listing, searching by ID, and filtering movies.',
+                    tech: ['Node.js', 'Express', 'MySQL', 'Prisma', 'TypeScript'],
+                    imageUrl: '/assets/unifecaf_flix.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '05/17/2026',
+                    githubUrl: 'https://github.com/LeonHauck/unifecaf_flix',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/unifecaf_flix.png',
+                        '/assets/unifecaf_flix2.png',
+                        '/assets/unifecaf_flix3.png',
                     ]
                 }
             ]
