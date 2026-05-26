@@ -177,6 +177,27 @@ export const translations = {
                         '/assets/unifecaf_flix2.png',
                         '/assets/unifecaf_flix3.png',
                     ]
+                },
+                {
+                    id: '6',
+                    title: 'Cadastro de Fornecedores HiperRoll',
+                    category: 'Web',
+                    description: 'Uma aplicação web robusta e moderna desenvolvida para automatizar e padronizar o processo de onboarding de novos fornecedores e clientes da Hiperroll. O sistema substitui formulários manuais por um fluxo digital inteligente, com validação de dados em tempo real, geração automatizada de documentos e integração com mensagens corporativas.',
+                    tech: ['Web', 'Automation', 'Frontend', 'Backend'],
+                    imageUrl: '/assets/Dados_Cadastrais_HiperRoll.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '26/05/2026',
+                    githubUrl: 'https://github.com/LeonHauck/CadastroFornecedoresHiperRoll.git',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7465170465758633984/',
+                    gallery: [
+                        '/assets/Dados_Cadastrais_HiperRoll.jpeg',
+                        '/assets/Cadastro_Finalizado_HiperRoll.jpeg',
+                        '/assets/CNPJ_HiperRoll.jpeg',
+                        '/assets/Financeiro_Fiscal_HiperRoll.jpeg',
+                        '/assets/Localizacao_HiperRoll.jpeg',
+                        '/assets/Logistica_HiperRoll.jpeg',
+                    ]
                 }
             ]
         },
@@ -535,6 +556,27 @@ export const translations = {
                         '/assets/unifecaf_flix.png',
                         '/assets/unifecaf_flix2.png',
                         '/assets/unifecaf_flix3.png',
+                    ]
+                },
+                {
+                    id: '6',
+                    title: 'HiperRoll Supplier Registration',
+                    category: 'Web',
+                    description: 'A robust and modern web application developed to automate and standardize the onboarding process of new suppliers and customers for Hiperroll. The system replaces manual forms with an intelligent digital flow, featuring real-time data validation, automated document generation, and integration with corporate messaging.',
+                    tech: ['Web', 'Automation', 'Frontend', 'Backend'],
+                    imageUrl: '/assets/Dados_Cadastrais_HiperRoll.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '05/26/2026',
+                    githubUrl: 'https://github.com/LeonHauck/CadastroFornecedoresHiperRoll.git',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7465170465758633984/',
+                    gallery: [
+                        '/assets/Dados_Cadastrais_HiperRoll.jpeg',
+                        '/assets/Cadastro_Finalizado_HiperRoll.jpeg',
+                        '/assets/CNPJ_HiperRoll.jpeg',
+                        '/assets/Financeiro_Fiscal_HiperRoll.jpeg',
+                        '/assets/Localizacao_HiperRoll.jpeg',
+                        '/assets/Logistica_HiperRoll.jpeg',
                     ]
                 }
             ]
