@@ -198,6 +198,28 @@ export const translations = {
                         '/assets/Localizacao_HiperRoll.jpeg',
                         '/assets/Logistica_HiperRoll.jpeg',
                     ]
+                },
+                {
+                    id: '7',
+                    title: 'Trade Marketing HiperRoll',
+                    category: 'Web',
+                    description: 'O projeto é um Dashboard web robusto que centraliza toda a gestão de visitas comerciais, monitoramento de rupturas e análise de dados de desempenho em redes varejistas.',
+                    tech: ['Web', 'Dashboard', 'Trade Marketing', 'Data Analysis'],
+                    imageUrl: '/assets/Login.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '30/06/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Trade-Marketing-HiperRoll',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7469903348314595328/',
+                    gallery: [
+                        '/assets/Login.jpeg',
+                        '/assets/Dashboard.jpg',
+                        '/assets/Historico.jpg',
+                        '/assets/Lojas.jpg',
+                        '/assets/Pdf.jpeg',
+                        '/assets/Produtos.jpg',
+                        '/assets/Rupturas.jpg',
+                    ]
                 }
             ]
         },
@@ -577,6 +599,28 @@ export const translations = {
                         '/assets/Financeiro_Fiscal_HiperRoll.jpeg',
                         '/assets/Localizacao_HiperRoll.jpeg',
                         '/assets/Logistica_HiperRoll.jpeg',
+                    ]
+                },
+                {
+                    id: '7',
+                    title: 'Trade Marketing HiperRoll',
+                    category: 'Web',
+                    description: 'The project is a robust web Dashboard that centralizes all commercial visit management, stockout monitoring, and performance data analysis in retail chains.',
+                    tech: ['Web', 'Dashboard', 'Trade Marketing', 'Data Analysis'],
+                    imageUrl: '/assets/Login.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '06/30/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Trade-Marketing-HiperRoll',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7469903348314595328/',
+                    gallery: [
+                        '/assets/Login.jpeg',
+                        '/assets/Dashboard.jpg',
+                        '/assets/Historico.jpg',
+                        '/assets/Lojas.jpg',
+                        '/assets/Pdf.jpeg',
+                        '/assets/Produtos.jpg',
+                        '/assets/Rupturas.jpg',
                     ]
                 }
             ]
