@@ -174,10 +174,38 @@ const Projects: React.FC = () => {
         >
           <button
             onClick={() => setFullscreenImage(null)}
-            className="absolute top-8 right-8 z-[10000] w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+            className="absolute top-4 right-4 md:top-8 md:right-8 z-[10000] w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
           >
-            <span className="material-symbols-outlined text-[32px]">close</span>
+            <span className="material-symbols-outlined text-[24px] md:text-[32px]">close</span>
           </button>
+
+          {selectedGallery && selectedGallery.length > 1 && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const currentIndex = selectedGallery.indexOf(fullscreenImage);
+                  const prevIndex = currentIndex > 0 ? currentIndex - 1 : selectedGallery.length - 1;
+                  setFullscreenImage(selectedGallery[prevIndex]);
+                }}
+                className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 z-[10000] w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+              >
+                <span className="material-symbols-outlined text-[24px] md:text-[32px]">chevron_left</span>
+              </button>
+              
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const currentIndex = selectedGallery.indexOf(fullscreenImage);
+                  const nextIndex = currentIndex < selectedGallery.length - 1 ? currentIndex + 1 : 0;
+                  setFullscreenImage(selectedGallery[nextIndex]);
+                }}
+                className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 z-[10000] w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+              >
+                <span className="material-symbols-outlined text-[24px] md:text-[32px]">chevron_right</span>
+              </button>
+            </>
+          )}
 
           {fullscreenImage.toLowerCase().endsWith('.mp4') ? (
             <video
