@@ -220,6 +220,25 @@ export const translations = {
                         '/assets/Produtos.jpg',
                         '/assets/Rupturas.jpg',
                     ]
+                },
+                {
+                    id: '8',
+                    title: 'Catalogo-Mobile',
+                    category: 'Mobile',
+                    description: 'Um aplicativo mobile responsivo construído em React Native (Expo) para listar produtos de uma loja online, consumindo a API REST pública do DummyJSON(https://dummyjson.com/).',
+                    tech: ['React Native', 'Expo', 'REST API'],
+                    imageUrl: '/assets/Tela de Login - CatalogoApp.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '08/08/2026',
+                    githubUrl: 'https://github.com/LeonHauck/catalogo-mobile-react-native',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Tela de Login - CatalogoApp.png',
+                        '/assets/Tela de Produtos - CatalogoApp.png',
+                        '/assets/Tela Descricao - CatalogoApp.png',
+                        '/assets/Tela do Usuário - CatalogoApp.png',
+                    ]
                 }
             ]
         },
@@ -621,6 +640,25 @@ export const translations = {
                         '/assets/Pdf.jpeg',
                         '/assets/Produtos.jpg',
                         '/assets/Rupturas.jpg',
+                    ]
+                },
+                {
+                    id: '8',
+                    title: 'Catalogo-Mobile',
+                    category: 'Mobile',
+                    description: 'A responsive mobile application built in React Native (Expo) to list products from an online store, consuming the public REST API from DummyJSON(https://dummyjson.com/).',
+                    tech: ['React Native', 'Expo', 'REST API'],
+                    imageUrl: '/assets/Tela de Login - CatalogoApp.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '08/08/2026',
+                    githubUrl: 'https://github.com/LeonHauck/catalogo-mobile-react-native',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Tela de Login - CatalogoApp.png',
+                        '/assets/Tela de Produtos - CatalogoApp.png',
+                        '/assets/Tela Descricao - CatalogoApp.png',
+                        '/assets/Tela do Usuário - CatalogoApp.png',
                     ]
                 }
             ]
