@@ -5,15 +5,17 @@ import { useLanguage } from '../components/LanguageContext';
 const Home: React.FC = () => {
   const { t } = useLanguage();
   const techStack = [
-    { name: 'HTML', icon: 'html' },
-    { name: 'CSS', icon: 'css' },
     { name: 'React', icon: 'deployed_code' },
     { name: 'TypeScript', icon: 'data_object' },
     { name: 'Python', icon: 'terminal' },
     { name: 'SQL', icon: 'database' },
-    { name: 'Angular', icon: 'code' },
-    { name: 'Postman', icon: 'send' },
-    { name: 'RPA', icon: 'smart_toy' },
+    { name: 'Java', icon: 'local_cafe' },
+    { name: 'IA Generativa', icon: 'robot_2' },
+    { name: 'Automação', icon: 'settings_suggest' },
+    { name: 'Web', icon: 'public' },
+    { name: 'API Rest', icon: 'api' },
+    { name: 'Git', icon: 'account_tree' },
+    { name: 'GitHub', icon: 'integration_instructions' },
   ];
 
   return (
