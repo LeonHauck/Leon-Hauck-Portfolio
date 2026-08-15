@@ -30,7 +30,7 @@ export const translations = {
         about: {
             role: 'Desenvolvedor Full Stack & Analista de Dados',
             profile: 'Perfil',
-            bio: 'Desenvolvedor Full Stack e Analista de Dados focado em construir ferramentas web robustas, transformar dados em decisões estratégicas e converter processos manuais em fluxos automatizados. Com sólida expertise em IA Generativa, desenvolvimento de software de ponta e dashboards de alta performance, uno visão analítica de negócio com execução técnica avançada.\n\nTenho mais de sete anos de dedicação à tecnologia, atuando profissionalmente e com registro em carteira como Desenvolvedor Full Stack. Meu ecossistema de competências engloba Python, Java, JavaScript, Node.js, Banco de Dados, APIs e Automação de Processos. Atualmente curso Análise e Desenvolvimento de Sistemas, entregando soluções digitais completas e personalizadas de ponta a ponta.',
+            bio: 'Desenvolvedor Full Stack e Analista de Dados focado em construir ferramentas web robustas, transformar dados em decisões estratégicas e converter processos manuais em fluxos automatizados. Com sólida expertise em IA Generativa, desenvolvimento de software de ponta e dashboards de alta performance, uno visão analítica de negócio com execução técnica avançada.\n\nTenho mais de sete anos de dedicação à tecnologia, atuando atualmente como Desenvolvedor Full Stack. Meu ecossistema de competências engloba Python, Java, JavaScript, Node.js, Banco de Dados, APIs e Automação de Processos. Atualmente curso Análise e Desenvolvimento de Sistemas, entregando soluções digitais completas e personalizadas de ponta a ponta.',
             journey: 'Jornada',
             downloadCvPt: 'BAIXAR CURRÍCULO (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
@@ -458,7 +458,7 @@ export const translations = {
         about: {
             role: 'Full Stack Developer & Data Analyst',
             profile: 'Profile',
-            bio: 'Full Stack Developer and Data Analyst focused on building robust web tools, transforming data into strategic decisions, and converting manual processes into automated workflows. With solid expertise in Generative AI, cutting-edge software development, and high-performance dashboards, I combine an analytical business vision with advanced technical execution.\n\nI have over seven years of dedication to technology, working professionally and formally registered as a Full Stack Developer. My skills ecosystem encompasses Python, Java, JavaScript, Node.js, Databases, APIs, and Process Automation. I am currently studying Systems Analysis and Development, delivering complete, end-to-end customized digital solutions.',
+            bio: 'Full Stack Developer and Data Analyst focused on building robust web tools, transforming data into strategic decisions, and converting manual processes into automated workflows. With solid expertise in Generative AI, cutting-edge software development, and high-performance dashboards, I combine an analytical business vision with advanced technical execution.\n\nI have over seven years of dedication to technology, currently working as a Full Stack Developer. My skills ecosystem encompasses Python, Java, JavaScript, Node.js, Databases, APIs, and Process Automation. I am currently studying Systems Analysis and Development, delivering complete, end-to-end customized digital solutions.',
             journey: 'Journey',
             downloadCvPt: 'DOWNLOAD CV (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
