@@ -28,20 +28,27 @@ export const translations = {
             est: 'EST. 2026',
         },
         about: {
-            role: 'Analista de Dados & Desenvolvedor de Software',
+            role: 'Desenvolvedor Full Stack & Analista de Dados',
             profile: 'Perfil',
-            bio: 'Analista de Dados e Desenvolvedor focado em transformar dados em decisões estratégicas e processos manuais em fluxos automatizados. Com sólida expertise em IA Generativa, Banco de Dados e Python, atuo no desenvolvimento de soluções de software personalizadas e dashboards de alta performance.\n\nTenho mais de sete anos de dedicação à tecnologia, com competências consolidadas em Automação de Processos, IA Generativa, Banco de Dados, APIs e Python. Atualmente curso Análise e Desenvolvimento de Sistemas, unindo visão analítica de negócio com execução técnica de ponta.',
+            bio: 'Desenvolvedor Full Stack e Analista de Dados focado em construir ferramentas web robustas, transformar dados em decisões estratégicas e converter processos manuais em fluxos automatizados. Com sólida expertise em IA Generativa, desenvolvimento de software de ponta e dashboards de alta performance, uno visão analítica de negócio com execução técnica avançada.\n\nTenho mais de sete anos de dedicação à tecnologia, atuando profissionalmente e com registro em carteira como Desenvolvedor Full Stack. Meu ecossistema de competências engloba Python, Java, JavaScript, Node.js, Banco de Dados, APIs e Automação de Processos. Atualmente curso Análise e Desenvolvimento de Sistemas, entregando soluções digitais completas e personalizadas de ponta a ponta.',
             journey: 'Jornada',
             downloadCvPt: 'BAIXAR CURRÍCULO (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
             experiences: [
                 {
+                    id: '0',
+                    role: 'Desenvolvedor Full Stack',
+                    company: 'HiperRoll Embalagens LTDA',
+                    period: '2026 — Presente',
+                    description: 'Desenvolvimento de ferramentas web ponta a ponta (Front-end e Back-end), criação de APIs RESTful e integração com bancos de dados relacionais e não-relacionais. Automatização de processos de negócios e fluxos manuais através de scripts modernos em Python e Node.js. Implementação de soluções de IA Generativa, criação e manutenção preventiva de sistemas web.',
+                    isCurrent: true
+                },
+                {
                     id: '1',
                     role: 'Analista Comercial & Business Intelligence (BI/Dev)',
                     company: 'HiperRoll Embalagens LTDA',
-                    period: '2026 — Presente',
+                    period: '2026 — 2026',
                     description: 'Desenvolvimento de dashboards Power BI e KPIs, automação de rotinas comerciais, análise técnica via Scanntech para inteligência de mercado e otimização de processos através de software.',
-                    isCurrent: true
                 },
                 {
                     id: '2',
@@ -449,20 +456,27 @@ export const translations = {
             est: 'EST. 2026',
         },
         about: {
-            role: 'Data Analyst & Software Developer',
+            role: 'Full Stack Developer & Data Analyst',
             profile: 'Profile',
-            bio: 'Data Analyst and Developer focused on transforming data into strategic decisions and manual processes into automated workflows. With solid expertise in Generative AI, Databases, and Python, I develop custom software solutions and high-performance dashboards.\n\nI have over seven years of dedication to technology, with consolidated skills in Process Automation, Generative AI, Databases, APIs, and Python. I am currently studying Systems Analysis and Development, combining analytical business vision with cutting-edge technical execution.',
+            bio: 'Full Stack Developer and Data Analyst focused on building robust web tools, transforming data into strategic decisions, and converting manual processes into automated workflows. With solid expertise in Generative AI, cutting-edge software development, and high-performance dashboards, I combine an analytical business vision with advanced technical execution.\n\nI have over seven years of dedication to technology, working professionally and formally registered as a Full Stack Developer. My skills ecosystem encompasses Python, Java, JavaScript, Node.js, Databases, APIs, and Process Automation. I am currently studying Systems Analysis and Development, delivering complete, end-to-end customized digital solutions.',
             journey: 'Journey',
             downloadCvPt: 'DOWNLOAD CV (PT-BR)',
             downloadCvEn: 'DOWNLOAD CURRICULUM (EN-US)',
             experiences: [
                 {
+                    id: '0',
+                    role: 'Full Stack Developer',
+                    company: 'HiperRoll Embalagens LTDA',
+                    period: '2026 — Present',
+                    description: 'End-to-end web tool development (Front-end and Back-end), creation of RESTful APIs, and integration with relational and non-relational databases. Automation of business processes and manual workflows through modern scripts in Python and Node.js. Implementation of Generative AI solutions, creation, and preventive maintenance of web systems.',
+                    isCurrent: true
+                },
+                {
                     id: '1',
                     role: 'Sales & Business Intelligence Analyst (BI/Dev)',
                     company: 'HiperRoll Embalagens LTDA',
-                    period: '2026 — Present',
+                    period: '2026 — 2026',
                     description: 'Development of Power BI dashboards and KPIs, automation of commercial routines, technical analysis via Scanntech for market intelligence, and process optimization through software.',
-                    isCurrent: true
                 },
                 {
                     id: '2',
