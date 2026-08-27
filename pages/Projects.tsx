@@ -5,14 +5,16 @@ import { useLanguage } from '../components/LanguageContext';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
-  const [filter, setFilter] = useState(t('projects.categories.all'));
+  const [filterIndex, setFilterIndex] = useState(0);
   const [selectedGallery, setSelectedGallery] = useState<string[] | null>(null);
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
   const projects: Project[] = t('projects.items');
 
   const categories = [t('projects.categories.all'), t('projects.categories.mobile'), t('projects.categories.web'), t('projects.categories.backend'), t('projects.categories.design'), t('projects.categories.data')];
-  const filteredProjects = filter === t('projects.categories.all') ? projects : projects.filter(p => p.category === filter);
+  
+  const activeCategory = categories[filterIndex] || categories[0];
+  const filteredProjects = activeCategory === t('projects.categories.all') ? projects : projects.filter(p => p.category === activeCategory);
 
   return (
     <div className="pt-6 px-4 max-w-lg mx-auto md:max-w-2xl">
@@ -25,11 +27,11 @@ const Projects: React.FC = () => {
         </div>
 
         <div className="flex gap-2 overflow-x-auto no-scrollbar py-2">
-          {categories.map(cat => (
+          {categories.map((cat, index) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
-              className={`flex h-9 shrink-0 items-center justify-center px-4 rounded-lg text-sm font-medium transition-all ${filter === cat
+              onClick={() => setFilterIndex(index)}
+              className={`flex h-9 shrink-0 items-center justify-center px-4 rounded-lg text-sm font-medium transition-all ${filterIndex === index
                 ? 'bg-primary text-white'
                 : 'bg-white dark:bg-surface-dark border border-black/10 dark:border-white/10 text-slate-600 dark:text-gray-300'
                 }`}
