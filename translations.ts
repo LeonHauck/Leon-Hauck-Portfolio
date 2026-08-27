@@ -15,6 +15,7 @@ export const translations = {
             title: 'Leon Hauck',
             subtitle: 'Desenvolvedor e Analista de dados. Especialista em automação de processos e inteligência de dados estratégica.',
             skills: {
+                fullStack: 'Desenvolvimento Full Stack',
                 blackBelt: 'Black Belt Lean Six Sigma',
                 automation: 'Automação de Processos',
                 negotiation: 'Negociação',
@@ -462,6 +463,7 @@ export const translations = {
             title: 'Leon Hauck',
             subtitle: 'Developer and Data Analyst. Specialist in process automation and strategic data intelligence.',
             skills: {
+                fullStack: 'Full Stack Development',
                 blackBelt: 'Lean Six Sigma Black Belt',
                 automation: 'Process Automation',
                 negotiation: 'Negotiation',

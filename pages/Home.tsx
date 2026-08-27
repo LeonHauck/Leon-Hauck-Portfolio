@@ -52,6 +52,10 @@ const Home: React.FC = () => {
 
             <div className="flex flex-col gap-2 mt-8 pl-4 text-sm text-slate-600 dark:text-slate-400 font-medium">
               <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-[20px] text-primary">devices</span>
+                <span>{t('home.skills.fullStack')}</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-[20px] text-primary">workspace_premium</span>
                 <span>{t('home.skills.blackBelt')}</span>
               </div>
