@@ -246,6 +246,25 @@ export const translations = {
                         '/assets/Tela Descricao - CatalogoApp.png',
                         '/assets/Tela do Usuário - CatalogoApp.png',
                     ]
+                },
+                {
+                    id: '9',
+                    title: 'Controle de EstoquePro',
+                    category: 'Web',
+                    description: 'Este é um projeto acadêmico de um Sistema de Controle de Estoque desenvolvido em Python utilizando o framework Flask. A aplicação visa resolver o desafio do gerenciamento eficiente da entrada e saída de produtos, eliminando o controle no papel e automatizando processos críticos.',
+                    tech: ['Python', 'Flask', 'Web', 'Backend'],
+                    imageUrl: '/assets/Dashboard-estoque-pro.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '27/08/2026',
+                    githubUrl: 'https://github.com/LeonHauck/controle-estoque-flask',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Dashboard-estoque-pro.png',
+                        '/assets/Login-estoque-pro.png',
+                        '/assets/Tela-Produtos-estoque-pro.png',
+                        '/assets/Usuarios-estoque-pro.png',
+                    ]
                 }
             ]
         },
@@ -673,6 +692,25 @@ export const translations = {
                         '/assets/Tela de Produtos - CatalogoApp.png',
                         '/assets/Tela Descricao - CatalogoApp.png',
                         '/assets/Tela do Usuário - CatalogoApp.png',
+                    ]
+                },
+                {
+                    id: '9',
+                    title: 'Controle de EstoquePro',
+                    category: 'Web',
+                    description: 'This is an academic project of an Inventory Control System developed in Python using the Flask framework. The application aims to solve the challenge of efficiently managing product entry and exit, eliminating paper-based control and automating critical processes.',
+                    tech: ['Python', 'Flask', 'Web', 'Backend'],
+                    imageUrl: '/assets/Dashboard-estoque-pro.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '08/27/2026',
+                    githubUrl: 'https://github.com/LeonHauck/controle-estoque-flask',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/Dashboard-estoque-pro.png',
+                        '/assets/Login-estoque-pro.png',
+                        '/assets/Tela-Produtos-estoque-pro.png',
+                        '/assets/Usuarios-estoque-pro.png',
                     ]
                 }
             ]
