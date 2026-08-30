@@ -421,6 +421,14 @@ export const translations = {
                     link: '/assets/Certificado Curso Completo de Macros e VBA.jpg',
                     type: 'IMAGE',
                 },
+                {
+                    id: 19,
+                    title: 'AWS Impressionador',
+                    institution: 'Hashtag Treinamentos',
+                    date: '2026',
+                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.jpg',
+                    type: 'IMAGE',
+                },
             ]
         },
         contact: {
@@ -858,6 +866,22 @@ export const translations = {
                     institution: 'Conquer in Company',
                     date: '2025',
                     link: '/assets/Certificado T&D Educação Corporativa Conquer.jpeg',
+                    type: 'IMAGE',
+                },
+                {
+                    id: 18,
+                    title: 'Complete Macros and VBA Course',
+                    institution: 'Udemy',
+                    date: '2026',
+                    link: '/assets/Certificado Curso Completo de Macros e VBA.jpg',
+                    type: 'IMAGE',
+                },
+                {
+                    id: 19,
+                    title: 'AWS Impressionador',
+                    institution: 'Hashtag Treinamentos',
+                    date: '2026',
+                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.jpg',
                     type: 'IMAGE',
                 },
             ]
