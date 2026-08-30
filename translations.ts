@@ -426,8 +426,8 @@ export const translations = {
                     title: 'AWS Impressionador',
                     institution: 'Hashtag Treinamentos',
                     date: '2026',
-                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.jpg',
-                    type: 'IMAGE',
+                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.pdf',
+                    type: 'PDF',
                 },
             ]
         },
@@ -881,8 +881,8 @@ export const translations = {
                     title: 'AWS Impressionador',
                     institution: 'Hashtag Treinamentos',
                     date: '2026',
-                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.jpg',
-                    type: 'IMAGE',
+                    link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.pdf',
+                    type: 'PDF',
                 },
             ]
         },
