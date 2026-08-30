@@ -54,9 +54,9 @@ const About: React.FC = () => {
               <div className={`absolute left-0 top-1.5 rounded-full border-[4px] border-background-light dark:border-background-dark z-10 transition-all ${exp.isCurrent ? 'size-[24px] bg-primary' : 'size-[16px] left-[4px] bg-slate-300 dark:bg-zinc-700'
                 }`} />
               <div className="flex flex-col gap-1">
-                <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                  <h4 className={`text-base font-bold ${exp.isCurrent ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-text-secondary'}`}>{exp.role}</h4>
-                  <span className="text-[10px] font-mono font-medium text-primary mt-1">{exp.period}</span>
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                  <h4 className={`text-base font-bold sm:flex-1 sm:min-w-0 sm:pr-3 ${exp.isCurrent ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-text-secondary'}`}>{exp.role}</h4>
+                  <span className="text-[10px] font-mono font-medium text-primary mt-1 sm:shrink-0 sm:whitespace-nowrap">{exp.period}</span>
                 </div>
                 <p className="text-sm font-semibold opacity-80">{exp.company}</p>
                 <p className="text-xs text-slate-500 dark:text-text-secondary mt-1 leading-relaxed">{exp.description}</p>
