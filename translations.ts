@@ -266,6 +266,22 @@ export const translations = {
                         '/assets/Tela-Produtos-estoque-pro.png',
                         '/assets/Usuarios-estoque-pro.png',
                     ]
+                },
+                {
+                    id: '10',
+                    title: 'Pipeline de Dados IoT',
+                    category: 'Dados',
+                    description: 'Este projeto foi desenvolvido como requisito para a disciplina Disruptive Architectures: IoT, Big Data e IA. O objetivo principal é construir um pipeline completo de dados para processar, armazenar e visualizar leituras de sensores de temperatura IoT.',
+                    tech: ['Python', 'Docker', 'PostgreSQL', 'Streamlit'],
+                    imageUrl: '/assets/dashboard.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '02/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/IoT-e-Docker',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/dashboard.png'
+                    ]
                 }
             ]
         },
@@ -721,6 +737,22 @@ export const translations = {
                         '/assets/Login-estoque-pro.png',
                         '/assets/Tela-Produtos-estoque-pro.png',
                         '/assets/Usuarios-estoque-pro.png',
+                    ]
+                },
+                {
+                    id: '10',
+                    title: 'IoT Data Pipeline',
+                    category: 'Data',
+                    description: 'This project was developed as a requirement for the Disruptive Architectures: IoT, Big Data and AI course. The main objective is to build a complete data pipeline to process, store, and visualize temperature readings from IoT sensors.',
+                    tech: ['Python', 'Docker', 'PostgreSQL', 'Streamlit'],
+                    imageUrl: '/assets/dashboard.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/02/2026',
+                    githubUrl: 'https://github.com/LeonHauck/IoT-e-Docker',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/dashboard.png'
                     ]
                 }
             ]
