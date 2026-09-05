@@ -282,6 +282,25 @@ export const translations = {
                     gallery: [
                         '/assets/dashboard.png'
                     ]
+                },
+                {
+                    id: '11',
+                    title: 'HiperRoll Snake',
+                    category: 'Web',
+                    description: 'Um jogo da cobrinha clássico, com visual moderno e a identidade da HiperRoll Embalagens — a cobra "come" a logo da marca e, de vez em quando, o mascote BobRoll aparece para desbloquear uma fase bônus. Tem placar compartilhado, então dá pra rodar como competição entre várias pessoas jogando de aparelhos diferentes. Feito para rodar em totens, tablets e celulares em eventos da marca. Sem build, sem frameworks — só HTML, CSS, JS e um mini-backend em PHP para o placar.',
+                    tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+                    imageUrl: '/assets/Inicio-game.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '05/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Snake-game-Hiperroll',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7501625173301952512/',
+                    gallery: [
+                        '/assets/Inicio-game.jpeg',
+                        '/assets/Snake.jpeg',
+                        '/assets/bonus.jpeg',
+                        '/assets/Game-over.jpeg'
+                    ]
                 }
             ]
         },
@@ -753,6 +772,25 @@ export const translations = {
                     linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
                     gallery: [
                         '/assets/dashboard.png'
+                    ]
+                },
+                {
+                    id: '11',
+                    title: 'HiperRoll Snake',
+                    category: 'Web',
+                    description: 'A classic snake game with a modern look and the HiperRoll Embalagens identity — the snake "eats" the brand logo, and occasionally, the mascot BobRoll appears to unlock a bonus phase. It has a shared scoreboard, so it can be run as a competition between several people playing from different devices. Designed to run on totems, tablets, and cell phones at brand events. No build, no frameworks — just HTML, CSS, JS, and a mini PHP backend for the scoreboard.',
+                    tech: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+                    imageUrl: '/assets/Inicio-game.jpeg',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/05/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Snake-game-Hiperroll',
+                    linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7501625173301952512/',
+                    gallery: [
+                        '/assets/Inicio-game.jpeg',
+                        '/assets/Snake.jpeg',
+                        '/assets/bonus.jpeg',
+                        '/assets/Game-over.jpeg'
                     ]
                 }
             ]
