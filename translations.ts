@@ -301,6 +301,24 @@ export const translations = {
                         '/assets/bonus.jpg',
                         '/assets/Game-over.jpg'
                     ]
+                },
+                {
+                    id: '12',
+                    title: 'Controle de Ações Comerciais — Hiperroll Embalagens',
+                    category: 'Web',
+                    description: 'Sistema web interno para o time comercial da Hiperroll Embalagens registrar, acompanhar e comprovar as ações comerciais realizadas junto às redes de clientes (supermercados), como base para a aprovação e o pagamento das verbas envolvidas. Substitui o antigo processo manual em formulário de Google Docs por um painel único, com histórico centralizado, upload de comprovante por ação, fluxo de aprovação por status e exportação de relatórios em Excel e PDF. Essa é a versão 3.0.',
+                    tech: ['PHP 8+', 'HTML', 'CSS', 'Vanilla JS'],
+                    imageUrl: '/assets/dashboard-acoes.png',
+                    isFeatured: true,
+                    version: 'v3.0.0',
+                    updatedAt: '09/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/acoes-hiperroll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/dashboard-acoes.png',
+                        '/assets/login-acoes.png',
+                        '/assets/modal-acoes.png'
+                    ]
                 }
             ]
         },
@@ -791,6 +809,24 @@ export const translations = {
                         '/assets/Snake.jpg',
                         '/assets/bonus.jpg',
                         '/assets/Game-over.jpg'
+                    ]
+                },
+                {
+                    id: '12',
+                    title: 'Commercial Actions Control — Hiperroll Embalagens',
+                    category: 'Web',
+                    description: 'Internal web system for the Hiperroll Embalagens commercial team to register, track, and prove commercial actions carried out with client networks (supermarkets), as a basis for approval and payment of the involved funds. It replaces the old manual Google Docs form process with a single dashboard, featuring centralized history, proof upload per action, status approval flow, and report export to Excel and PDF. This is version 3.0.',
+                    tech: ['PHP 8+', 'HTML', 'CSS', 'Vanilla JS'],
+                    imageUrl: '/assets/dashboard-acoes.png',
+                    isFeatured: true,
+                    version: 'v3.0.0',
+                    updatedAt: '09/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/acoes-hiperroll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/dashboard-acoes.png',
+                        '/assets/login-acoes.png',
+                        '/assets/modal-acoes.png'
                     ]
                 }
             ]
