@@ -315,8 +315,8 @@ export const translations = {
                     githubUrl: 'https://github.com/LeonHauck/acoes-hiperroll',
                     linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
                     gallery: [
-                        '/assets/dashboard-acoes.png',
                         '/assets/login-acoes.png',
+                        '/assets/dashboard-acoes.png',
                         '/assets/modal-acoes.png'
                     ]
                 }
@@ -824,8 +824,8 @@ export const translations = {
                     githubUrl: 'https://github.com/LeonHauck/acoes-hiperroll',
                     linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
                     gallery: [
-                        '/assets/dashboard-acoes.png',
                         '/assets/login-acoes.png',
+                        '/assets/dashboard-acoes.png',
                         '/assets/modal-acoes.png'
                     ]
                 }
