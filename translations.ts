@@ -319,6 +319,25 @@ export const translations = {
                         '/assets/dashboard-acoes.png',
                         '/assets/modal-acoes.png'
                     ]
+                },
+                {
+                    id: '13',
+                    title: 'Controle de Gastos',
+                    category: 'Web',
+                    description: 'Rastreador de despesas e receitas pessoais com visual moderno e 5 temas à escolha. Desenvolvido com HTML, CSS e JavaScript puros (sem frameworks), roda 100% no navegador. Inclui gráficos de despesas, painel de metas e previsão de gastos, modal animado de fim de mês, sistema de conquistas (sequência e medalhas) e sincronização em tempo real entre dispositivos via Firebase (Auth + Firestore), além de funcionar offline via localStorage.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Firebase'],
+                    imageUrl: '/assets/controle-gastos.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '14/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/controle-de-gastos',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/controle-gastos.png',
+                        '/assets/controle-gastos-mes.png',
+                        '/assets/controle-gastos-modal.png',
+                        '/assets/controle-gastos-transacoes.png'
+                    ]
                 }
             ]
         },
@@ -827,6 +846,25 @@ export const translations = {
                         '/assets/login-acoes.png',
                         '/assets/dashboard-acoes.png',
                         '/assets/modal-acoes.png'
+                    ]
+                },
+                {
+                    id: '13',
+                    title: 'Controle de Gastos',
+                    category: 'Web',
+                    description: 'Personal expense and income tracker with a modern look and 5 themes to choose from. Developed with pure HTML, CSS, and JavaScript (no frameworks), running 100% in the browser. Features include expense charts, goals and forecast dashboard, animated end-of-month recap modal, achievements system (streaks and medals), and real-time synchronization across devices via Firebase (Auth + Firestore), plus offline functionality via localStorage.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Firebase'],
+                    imageUrl: '/assets/controle-gastos.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/14/2026',
+                    githubUrl: 'https://github.com/LeonHauck/controle-de-gastos',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/controle-gastos.png',
+                        '/assets/controle-gastos-mes.png',
+                        '/assets/controle-gastos-modal.png',
+                        '/assets/controle-gastos-transacoes.png'
                     ]
                 }
             ]
