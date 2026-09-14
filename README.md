@@ -80,7 +80,7 @@ npm run build
 
 <div align="left">
   <strong>Leon Hauck</strong> <br>
-  <em>Desenvolvedor e Analista de Dados</em>
+  <em>Desenvolvedor Full Stack e Analista de Dados</em>
 </div>
 <br>
 
