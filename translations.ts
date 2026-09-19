@@ -338,6 +338,25 @@ export const translations = {
                         '/assets/controle-gastos-modal.png',
                         '/assets/controle-gastos-transacoes.png'
                     ]
+                },
+                {
+                    id: '14',
+                    title: 'Desafio BobRoll',
+                    category: 'Web',
+                    description: 'Um clone do clássico Pac-Man temático da HiperRoll. Desenvolvido com HTML, CSS e JavaScript puros (sem frameworks), roda direto no navegador. Conta com 4 fantasmas (rivais) com Inteligência Artificial própria, labirintos gerados aleatoriamente a cada rodada, trilha sonora eletrônica dinâmica gerada via Web Audio API e um ranking que pode ser local ou compartilhado via PHP.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Web Audio API'],
+                    imageUrl: '/assets/desafio-bobroll.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '19/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Desafio-BobRoll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/desafio-bobroll.png',
+                        '/assets/desafio-bobroll-run.png',
+                        '/assets/desafio-bobroll-pause.png',
+                        '/assets/desafio-bobroll-ranking.png'
+                    ]
                 }
             ]
         },
@@ -865,6 +884,25 @@ export const translations = {
                         '/assets/controle-gastos-mes.png',
                         '/assets/controle-gastos-modal.png',
                         '/assets/controle-gastos-transacoes.png'
+                    ]
+                },
+                {
+                    id: '14',
+                    title: 'Desafio BobRoll',
+                    category: 'Web',
+                    description: 'A classic Pac-Man clone themed for HiperRoll. Built with pure HTML, CSS, and JavaScript (no frameworks), running entirely in the browser. Features include 4 ghost rivals with unique AI, randomized mazes each round, a dynamic electronic soundtrack generated via Web Audio API, and a local or shared leaderboard via PHP.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Web Audio API'],
+                    imageUrl: '/assets/desafio-bobroll.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/19/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Desafio-BobRoll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/desafio-bobroll.png',
+                        '/assets/desafio-bobroll-run.png',
+                        '/assets/desafio-bobroll-pause.png',
+                        '/assets/desafio-bobroll-ranking.png'
                     ]
                 }
             ]
