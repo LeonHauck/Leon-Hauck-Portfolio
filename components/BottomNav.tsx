@@ -21,7 +21,7 @@ const BottomNav: React.FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-lg border-t border-black/5 dark:border-white/10 z-50 pb-6 pt-3 px-6 transition-colors duration-300">
+    <nav className="fixed bottom-0 left-0 w-full bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-lg border-t border-black/5 dark:border-white/10 z-50 pb-6 pt-3 px-2 sm:px-6 transition-colors duration-300">
       <div className="flex justify-between items-end max-w-md mx-auto">
         {navItems.map((item) => {
           const isActive = currentPath === item.path;
@@ -29,20 +29,20 @@ const BottomNav: React.FC = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`flex flex-col items-center gap-1 group w-16 transition-all ${isActive ? 'text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary'
+              className={`flex flex-col items-center gap-1 group flex-1 sm:w-16 transition-all overflow-hidden ${isActive ? 'text-primary dark:text-white' : 'text-slate-400 dark:text-text-secondary'
                 }`}
             >
               <div
-                className={`w-10 h-1 rounded mb-1 transition-all duration-300 ${isActive ? 'bg-primary' : 'bg-transparent'
+                className={`w-8 sm:w-10 h-1 rounded mb-1 transition-all duration-300 ${isActive ? 'bg-primary' : 'bg-transparent'
                   }`}
               />
               <span
-                className={`material-symbols-outlined transition-transform duration-300 group-active:scale-90 ${isActive ? 'fill-1' : ''
+                className={`material-symbols-outlined text-[22px] sm:text-[24px] transition-transform duration-300 group-active:scale-90 ${isActive ? 'fill-1' : ''
                   }`}
               >
                 {item.icon}
               </span>
-              <span className={`text-[10px] font-bold tracking-wider ${isActive ? 'opacity-100' : 'opacity-70'}`}>
+              <span className={`text-[8.5px] sm:text-[10px] font-bold tracking-tight sm:tracking-wider truncate w-full text-center px-0.5 ${isActive ? 'opacity-100' : 'opacity-70'}`}>
                 {item.label}
               </span>
             </Link>
@@ -52,13 +52,13 @@ const BottomNav: React.FC = () => {
         {/* Language Toggle */}
         <button
           onClick={toggleLanguage}
-          className="flex flex-col items-center gap-1 group w-16 transition-all text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white"
+          className="flex flex-col items-center gap-1 group flex-1 sm:w-16 transition-all overflow-hidden text-slate-400 dark:text-text-secondary hover:text-primary dark:hover:text-white"
         >
-          <div className="w-10 h-1 rounded mb-1 bg-transparent" />
-          <span className="material-symbols-outlined transition-transform duration-300 group-active:scale-90">
+          <div className="w-8 sm:w-10 h-1 rounded mb-1 bg-transparent" />
+          <span className="material-symbols-outlined text-[22px] sm:text-[24px] transition-transform duration-300 group-active:scale-90">
             translate
           </span>
-          <span className="text-[10px] font-bold tracking-wider uppercase">
+          <span className="text-[8.5px] sm:text-[10px] font-bold tracking-tight sm:tracking-wider uppercase">
             {language === 'pt' ? 'EN' : 'PT'}
           </span>
         </button>
