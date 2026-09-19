@@ -520,6 +520,14 @@ export const translations = {
                     link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.pdf',
                     type: 'PDF',
                 },
+                {
+                    id: 20,
+                    title: 'HTML & CSS Impressionador',
+                    institution: 'Hashtag Treinamentos',
+                    date: '2026',
+                    link: '/assets/Certificado HTML & CSS - Hashtag Treinamentos.pdf',
+                    type: 'PDF',
+                },
             ]
         },
         contact: {
@@ -1064,6 +1072,14 @@ export const translations = {
                     institution: 'Hashtag Treinamentos',
                     date: '2026',
                     link: '/assets/Certificado AWS Impressionador - Hashtag Treinamentos.pdf',
+                    type: 'PDF',
+                },
+                {
+                    id: 20,
+                    title: 'HTML & CSS Impressionador',
+                    institution: 'Hashtag Treinamentos',
+                    date: '2026',
+                    link: '/assets/Certificado HTML & CSS - Hashtag Treinamentos.pdf',
                     type: 'PDF',
                 },
             ]
