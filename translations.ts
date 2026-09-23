@@ -376,6 +376,25 @@ export const translations = {
                         '/assets/hipertris-pause.png',
                         '/assets/hipertris-ranking.png'
                     ]
+                },
+                {
+                    id: '16',
+                    title: 'Agenda Studio',
+                    category: 'Web',
+                    description: 'Sistema completo de agendamentos para profissionais da beleza. Conta com página pública intuitiva para clientes marcarem horários e um painel administrativo seguro para gestão de agenda, serviços, clientes e finanças. Construído com Vanilla JS e integrado ao Supabase (PostgreSQL), utilizando Row Level Security (RLS) para proteger os dados. O painel administrativo é instalável como PWA em dispositivos móveis.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Supabase', 'PWA'],
+                    imageUrl: '/assets/studio-dashboard.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '23/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/agenda-studio',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/studio-dashboard.png',
+                        '/assets/studio-financas.png',
+                        '/assets/studio-servicos.png',
+                        '/assets/studio-agendamento.png'
+                    ]
                 }
             ]
         },
@@ -949,6 +968,25 @@ export const translations = {
                         '/assets/hipertris-gameplay.png',
                         '/assets/hipertris-pause.png',
                         '/assets/hipertris-ranking.png'
+                    ]
+                },
+                {
+                    id: '16',
+                    title: 'Agenda Studio',
+                    category: 'Web',
+                    description: 'Complete scheduling system for beauty professionals. It features an intuitive public page for clients to book appointments and a secure administrative panel to manage schedules, services, clients, and finances. Built with Vanilla JS and integrated with Supabase (PostgreSQL), using Row Level Security (RLS) for data protection. The admin panel is installable as a PWA on mobile devices.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Supabase', 'PWA'],
+                    imageUrl: '/assets/studio-dashboard.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/23/2026',
+                    githubUrl: 'https://github.com/LeonHauck/agenda-studio',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/studio-dashboard.png',
+                        '/assets/studio-financas.png',
+                        '/assets/studio-servicos.png',
+                        '/assets/studio-agendamento.png'
                     ]
                 }
             ]
