@@ -357,6 +357,25 @@ export const translations = {
                         '/assets/desafio-bobroll-pause.png',
                         '/assets/desafio-bobroll-ranking.png'
                     ]
+                },
+                {
+                    id: '15',
+                    title: 'Tetris HiperRoll',
+                    category: 'Web',
+                    description: 'Um clone do clássico Tetris com a identidade visual da HiperRoll, projetado para eventos. Roda perfeitamente no navegador ou como aplicativo desktop offline via Electron. Conta com mecânicas completas (hold, peça fantasma, níveis de velocidade), trilha sonora gerada dinamicamente via código, pontuação com multiplicadores e um ranking competitivo. Inclui sistema de coleta de leads focado em eventos, garantindo privacidade.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Electron', 'PHP'],
+                    imageUrl: '/assets/hipertris.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '22/09/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Tetris-HiperRoll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/hipertris.png',
+                        '/assets/hipertris-gameplay.png',
+                        '/assets/hipertris-pause.png',
+                        '/assets/hipertris-ranking.png'
+                    ]
                 }
             ]
         },
@@ -911,6 +930,25 @@ export const translations = {
                         '/assets/desafio-bobroll-run.png',
                         '/assets/desafio-bobroll-pause.png',
                         '/assets/desafio-bobroll-ranking.png'
+                    ]
+                },
+                {
+                    id: '15',
+                    title: 'Tetris HiperRoll',
+                    category: 'Web',
+                    description: 'A classic Tetris clone featuring HiperRoll\'s visual identity, specifically designed for events. It runs smoothly in the browser or as an offline desktop app using Electron. Features include complete mechanics (hold, ghost piece, speed levels), dynamically code-generated soundtrack, multiplier-based scoring, and a competitive leaderboard. It also includes a privacy-focused lead collection system for event organizers.',
+                    tech: ['HTML', 'CSS', 'Vanilla JS', 'Electron', 'PHP'],
+                    imageUrl: '/assets/hipertris.png',
+                    isFeatured: true,
+                    version: 'v1.0.0',
+                    updatedAt: '09/22/2026',
+                    githubUrl: 'https://github.com/LeonHauck/Tetris-HiperRoll',
+                    linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+                    gallery: [
+                        '/assets/hipertris.png',
+                        '/assets/hipertris-gameplay.png',
+                        '/assets/hipertris-pause.png',
+                        '/assets/hipertris-ranking.png'
                     ]
                 }
             ]
