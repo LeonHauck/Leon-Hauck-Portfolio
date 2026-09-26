@@ -16,7 +16,7 @@ const About: React.FC = () => {
             <img
               src="/assets/leon-profile.jpg"
               alt="Leon Hauck Profile"
-              className="w-full h-full object-cover brightness-110 contrast-110 no-invert"
+              className="w-full h-full object-cover no-invert"
             />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-white dark:bg-background-dark p-1 rounded-full">
