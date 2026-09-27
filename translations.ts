@@ -566,6 +566,14 @@ export const translations = {
                     link: '/assets/Certificado HTML & CSS - Hashtag Treinamentos.pdf',
                     type: 'PDF',
                 },
+                {
+                    id: 21,
+                    title: 'Engenharia de Prompts com IA',
+                    institution: 'Udemy',
+                    date: '2026',
+                    link: '/assets/Certificado Engenharia de Prompts com IA.jpg',
+                    type: 'IMAGE',
+                },
             ]
         },
         contact: {
@@ -1157,6 +1165,14 @@ export const translations = {
                     date: '2026',
                     link: '/assets/Certificado HTML & CSS - Hashtag Treinamentos.pdf',
                     type: 'PDF',
+                },
+                {
+                    id: 21,
+                    title: 'AI Prompt Engineering',
+                    institution: 'Udemy',
+                    date: '2026',
+                    link: '/assets/Certificado Engenharia de Prompts com IA.jpg',
+                    type: 'IMAGE',
                 },
             ]
         },
