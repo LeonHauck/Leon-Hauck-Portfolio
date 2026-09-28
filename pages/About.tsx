@@ -14,7 +14,7 @@ const About: React.FC = () => {
         <div className="relative group">
           <div className="size-32 rounded-lg overflow-hidden border-2 border-primary/20 bg-white dark:bg-surface-dark shadow-xl profile-image-container">
             <img
-              src="/assets/leon-profile.jpg"
+              src="/assets/leon-profile.png"
               alt="Leon Hauck Profile"
               className="w-full h-full object-cover no-invert"
             />

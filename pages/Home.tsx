@@ -37,7 +37,7 @@ const Home: React.FC = () => {
               <img
                 alt="Developer Portrait"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 no-invert"
-                src="/assets/leon-profile.jpg"
+                src="/assets/leon-profile.png"
               />
             </div>
           </div>
