@@ -1,19 +1,43 @@
 import React, { useEffect, useRef } from 'react';
 
 interface MatrixBackgroundProps {
-    words?: string[]; // Words to extract characters from, or display
+    words?: string[]; // Words that fall vertically, letter by letter
     fontSize?: number;
-    opacity?: number;
-    speed?: number;
+    trail?: number; // 0..1 — how fast the trail fades (lower = longer trail)
+    speed?: number; // ms between steps
 }
+
+interface Stream {
+    y: number; // head position, in rows
+    step: number; // rows advanced per tick
+    word: string;
+    charIndex: number;
+    gap: number; // filler glyphs left before the next word starts
+    last: string; // last glyph drawn, repainted in green once the head moves on
+    lastIsWord: boolean;
+}
+
+const KATAKANA = 'アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロヲン';
+const DIGITS = '0123456789';
+const FILLER = KATAKANA + DIGITS;
+
+const HEAD_COLOR = '#d6ffe0';
+const WORD_COLOR = '#00ff41';
+const FILLER_COLOR = '#0a8f2a';
+const BACKGROUND = '4, 8, 6'; // background-dark, as rgb
+
+const pick = <T,>(list: ArrayLike<T>): T => list[Math.floor(Math.random() * list.length)];
 
 const MatrixBackground: React.FC<MatrixBackgroundProps> = ({
     words = ['PYTHON', 'SQL', 'DATA', 'REACT', 'CODE', 'LEON', 'ANALYSIS'],
     fontSize = 16,
-    opacity = 0.05,
-    speed = 60,
+    trail = 0.07,
+    speed = 55,
 }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    // Kept in a ref so a language switch swaps the words without restarting the rain
+    const wordsRef = useRef(words);
+    wordsRef.current = words;
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -22,122 +46,134 @@ const MatrixBackground: React.FC<MatrixBackgroundProps> = ({
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
 
-        // Set canvas size
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let width = 0;
+        let height = 0;
+        let streams: Stream[] = [];
+
+        const newStream = (y: number): Stream => ({
+            y,
+            step: 0.5 + Math.random() * 0.5, // never above 1, so no row is skipped
+            word: pick(wordsRef.current),
+            charIndex: 0,
+            gap: Math.floor(Math.random() * 12),
+            last: '',
+            lastIsWord: false,
+        });
+
+        const resize = () => {
+            // Cap the pixel ratio: sharp on retina without quadrupling the fill cost
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = Math.floor(width * dpr);
+            canvas.height = Math.floor(height * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
+            ctx.textBaseline = 'top';
+
+            const columns = Math.ceil(width / fontSize);
+            const rows = height / fontSize;
+            // Keep the streams that are already falling; only add/remove the difference
+            streams = Array.from({ length: columns }, (_, i) => streams[i] ?? newStream(Math.random() * -rows));
         };
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        const nextGlyph = (s: Stream): { glyph: string; isWord: boolean } => {
+            if (s.gap > 0) {
+                s.gap--;
+                return { glyph: pick(FILLER), isWord: false };
+            }
+            const glyph = s.word.charAt(s.charIndex++);
+            if (s.charIndex >= s.word.length) {
+                s.word = pick(wordsRef.current);
+                s.charIndex = 0;
+                s.gap = 3 + Math.floor(Math.random() * 10);
+            }
+            // Spaces inside multi-word terms become filler so the stream never breaks
+            return glyph === ' ' ? { glyph: pick(FILLER), isWord: false } : { glyph, isWord: true };
+        };
 
-        // Matrix characters - mix of Katakana, Latin, and Numbers, plus characters from user words
-        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const nums = '0123456789';
-        // Combine standard matrix chars with letters from user's words to personalize it
-        const customChars = words.join('').toUpperCase() + ' ';
-        const alphabet = katakana + latin + nums + customChars;
+        const tick = () => {
+            // Translucent fill over the previous frame is what leaves the fading trail
+            ctx.fillStyle = `rgba(${BACKGROUND}, ${trail})`;
+            ctx.fillRect(0, 0, width, height);
 
-        const columns = Math.floor(canvas.width / fontSize);
+            for (let i = 0; i < streams.length; i++) {
+                const s = streams[i];
+                const prevRow = Math.floor(s.y);
+                s.y += s.step;
+                const row = Math.floor(s.y);
+                if (row === prevRow) continue;
 
-        // State for each column
-        // drops[i] = current y position (row)
-        const drops: number[] = [];
-        // columnData[i] = { word: string, charIndex: number } - which word is falling and which char next
-        const columnData: { word: string; charIndex: number }[] = [];
+                const x = i * fontSize;
 
-        // Initialize drops and column data
-        for (let i = 0; i < columns; i++) {
-            drops[i] = Math.random() * -100; // Start widely scattered above
-            columnData[i] = {
-                word: words[Math.floor(Math.random() * words.length)],
-                charIndex: 0
-            };
-        }
-
-        const draw = () => {
-            // translucent black background to show trail
-            ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0F0'; // Green text
-            ctx.font = `${fontSize}px monospace`;
-
-            for (let i = 0; i < columns; i++) {
-                const data = columnData[i];
-
-                // Get the current character from the assigned word
-                // If charIndex exceeds word length, we might print a space or reset
-                let text = '';
-
-                if (data.charIndex < data.word.length) {
-                    text = data.word.charAt(data.charIndex);
-                } else {
-                    // Gap between words
-                    text = ' ';
+                // The glyph that was the bright head becomes part of the green trail
+                if (s.last) {
+                    ctx.fillStyle = `rgb(${BACKGROUND})`;
+                    ctx.fillRect(x, prevRow * fontSize, fontSize, fontSize);
+                    ctx.fillStyle = s.lastIsWord ? WORD_COLOR : FILLER_COLOR;
+                    ctx.fillText(s.last, x, prevRow * fontSize);
                 }
 
-                // Randomly make some characters brighter/white
-                if (Math.random() > 0.98) {
-                    ctx.fillStyle = '#FFF';
-                } else {
-                    ctx.fillStyle = '#0F0';
-                }
+                const { glyph, isWord } = nextGlyph(s);
+                ctx.fillStyle = HEAD_COLOR;
+                ctx.fillText(glyph, x, row * fontSize);
+                s.last = glyph;
+                s.lastIsWord = isWord;
 
-                // Draw the character
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                // Update state for next frame
-
-                // Move drop down
-                drops[i]++;
-
-                // Advance character index
-                // We only advance char index if the drop is actually on screen or falling
-                // To keep words intact, we simple advance charIndex every frame for this column
-                columnData[i].charIndex++;
-
-                // Reset condition: 
-                // If drop is effectively off screen (randomized) OR we finished the word and want a gap?
-                // Actually, simpler: when drops[i] resets to 0 (top), we pick a new word.
-                // We also need to handle the case where the word finishes mid-screen. We want to start a new word or leave a gap.
-
-                // Improved logic:
-                // If we finished the word (plus some gap), reset charIndex to 0 and pick new word?
-                // But we want the "stream" to be continuous? 
-                // The standard matrix effect is one continuous stream per column.
-                // If we want "PYTHON" then "SQL" in the same column:
-
-                if (data.charIndex >= data.word.length + 5) { // +5 for gap
-                    columnData[i].word = words[Math.floor(Math.random() * words.length)];
-                    columnData[i].charIndex = 0;
-                }
-
-                // Reset drop to top randomly after it has crossed screen
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                    // When resetting to top, we should probably reset the word too so it starts fresh at top
-                    columnData[i].word = words[Math.floor(Math.random() * words.length)];
-                    columnData[i].charIndex = 0;
+                if (row * fontSize > height && Math.random() > 0.975) {
+                    streams[i] = newStream(-1);
                 }
             }
         };
 
-        const interval = setInterval(draw, speed);
+        let frame = 0;
+        let lastTick = 0;
+
+        const loop = (now: number) => {
+            frame = requestAnimationFrame(loop);
+            if (now - lastTick < speed) return;
+            lastTick = now;
+            tick();
+        };
+
+        const start = () => {
+            cancelAnimationFrame(frame);
+            if (reducedMotion.matches) {
+                // No animation: paint one settled frame and stop
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < 90; i++) tick();
+                return;
+            }
+            if (!document.hidden) frame = requestAnimationFrame(loop);
+        };
+
+        const onResize = () => {
+            resize();
+            start();
+        };
+
+        resize();
+        start();
+
+        window.addEventListener('resize', onResize);
+        document.addEventListener('visibilitychange', start);
+        reducedMotion.addEventListener('change', start);
 
         return () => {
-            clearInterval(interval);
-            window.removeEventListener('resize', resizeCanvas);
+            cancelAnimationFrame(frame);
+            window.removeEventListener('resize', onResize);
+            document.removeEventListener('visibilitychange', start);
+            reducedMotion.removeEventListener('change', start);
         };
-    }, [words, fontSize, opacity, speed]);
+    }, [fontSize, trail, speed]);
 
     return (
-        <canvas
-            ref={canvasRef}
-            className="fixed inset-0 pointer-events-none z-0"
-            style={{ opacity: 0.15 }} // Overall component opacity to blend with background color
-        />
+        <div className="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
+            <canvas ref={canvasRef} className="w-full h-full opacity-30 md:opacity-40" />
+            {/* Darkens the middle of the screen, where the content sits, and lets the rain show at the edges */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(4,8,6,0.85)_0%,rgba(4,8,6,0.65)_50%,rgba(4,8,6,0.2)_100%)]" />
+        </div>
     );
 };
 

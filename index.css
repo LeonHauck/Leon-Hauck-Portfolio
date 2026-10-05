@@ -1,11 +1,125 @@
-/* Impede que navegadores invertam cores de imagens no modo escuro forçado */
-img, 
-.no-invert {
-    color-scheme: only light !important;
-    forced-color-adjust: none !important;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Declara a página como já sendo escura: impede o "modo escuro forçado" dos navegadores de recolorir o site */
+    html {
+        color-scheme: dark;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100dvh;
+    }
+
+    ::selection {
+        background: rgba(0, 255, 65, 0.25);
+        color: #fff;
+    }
+
+    :focus-visible {
+        outline: 2px solid #22c55e;
+        outline-offset: 2px;
+    }
+
+    /* Impede que navegadores invertam cores de imagens no modo escuro forçado */
+    img,
+    .no-invert {
+        color-scheme: only light !important;
+        forced-color-adjust: none !important;
+    }
 }
 
-/* Garante que o fundo não afete a visualização como raio-x */
-.profile-image-container {
-    isolation: isolate;
+@layer components {
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .material-symbols-outlined.fill-1 {
+        font-variation-settings: 'FILL' 1;
+    }
+
+    /* Cartão base: superfície translúcida para a matrix rain aparecer por trás sem atrapalhar a leitura */
+    .panel {
+        @apply rounded-lg border border-border-dark bg-surface-dark/85 backdrop-blur-md;
+    }
+
+    .panel-hover {
+        @apply transition-all duration-300 hover:border-primary/40 hover:shadow-glow;
+    }
+
+    /* Rótulo estilo terminal */
+    .mono-label {
+        @apply font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-primary-light;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded px-5 text-sm font-bold tracking-wide transition-all duration-200 active:scale-[0.98];
+    }
+
+    .btn-primary {
+        @apply btn bg-primary text-white shadow-glow-sm hover:bg-primary-light hover:shadow-glow;
+    }
+
+    .btn-ghost {
+        @apply btn border border-primary/30 bg-surface-dark/60 text-white backdrop-blur-sm hover:border-primary hover:bg-primary/10;
+    }
+
+    .chip {
+        @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded border border-border-dark bg-surface-dark/80 px-2.5 py-1 font-mono text-[11px] text-text-secondary;
+    }
+
+    .icon-btn {
+        @apply flex h-9 w-9 items-center justify-center rounded border border-border-dark bg-surface-raised text-text-secondary transition-colors hover:border-primary hover:bg-primary hover:text-white;
+    }
+
+    .field {
+        @apply block w-full rounded border-border-dark bg-background-dark/70 text-white placeholder-zinc-600 transition-colors focus:border-primary focus:ring-1 focus:ring-primary sm:text-sm;
+    }
+
+    /* Isola a foto do fundo para ela não sofrer mistura de cor */
+    .profile-image-container {
+        isolation: isolate;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .mask-gradient-x {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .text-glow {
+        text-shadow: 0 0 18px rgba(0, 255, 65, 0.45);
+    }
+
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        will-change: transform;
+    }
+
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }

@@ -2,92 +2,110 @@
 import React from 'react';
 import { Experience } from '../types';
 import { useLanguage } from '../components/LanguageContext';
+import PhotoFrame from '../components/PhotoFrame';
+
+// Turns **text** into bold: this is how the numbers in the journey are highlighted
+const renderBold = (text: string) =>
+  text.split('**').map((part, index) =>
+    index % 2 === 1 ? <strong key={index} className="font-semibold text-white">{part}</strong> : part
+  );
 
 const About: React.FC = () => {
   const { t } = useLanguage();
   const experiences: Experience[] = t('about.experiences');
 
   return (
-    <div className="flex flex-col gap-8 px-6 pt-6 max-w-lg mx-auto">
+    <div className="grid gap-10 px-6 pt-8 md:pt-12 max-w-lg lg:max-w-5xl mx-auto lg:grid-cols-[280px_1fr] lg:gap-14 lg:items-start">
       {/* Profile Header */}
-      <section className="flex flex-col items-center gap-6">
-        <div className="relative group">
-          <div className="size-32 rounded-lg overflow-hidden border-2 border-primary/20 bg-white dark:bg-surface-dark shadow-xl profile-image-container">
-            <img
-              src="/assets/leon-profile.png"
-              alt="Leon Hauck Profile"
-              className="w-full h-full object-cover no-invert"
-            />
-          </div>
-          <div className="absolute -bottom-2 -right-2 bg-white dark:bg-background-dark p-1 rounded-full">
-            <div className="size-4 bg-emerald-500 rounded-full border-2 border-white dark:border-background-dark"></div>
-          </div>
-        </div>
+      <aside className="flex flex-col items-center gap-6 lg:sticky lg:top-28">
+        <PhotoFrame
+          src="/assets/leon-avatar.webp"
+          alt="Leon Hauck"
+          priority
+          className="size-36 lg:size-48"
+        />
         <div className="text-center space-y-1">
-          <h2 className="text-3xl font-bold tracking-tight">Leon Hauck</h2>
-          <p className="text-primary font-medium tracking-wide uppercase text-sm">{t('about.role')}</p>
-          <p className="text-slate-500 dark:text-text-secondary text-xs flex items-center justify-center gap-1 mt-2">
+          <h1 className="text-3xl font-bold tracking-tight">Leon Hauck</h1>
+          <p className="mono-label text-balance">{t('about.role')}</p>
+          <p className="text-text-secondary text-xs flex items-center justify-center gap-1 pt-2">
             <span className="material-symbols-outlined text-[14px]">location_on</span>
             Juiz de Fora, Brasil
           </p>
         </div>
-      </section>
 
-      {/* Bio */}
-      <section className="bg-white dark:bg-surface-dark p-6 rounded shadow-sm border border-black/5 dark:border-white/5">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="material-symbols-outlined text-primary text-xl">fingerprint</span>
-          <h3 className="text-lg font-bold tracking-tight">{t('about.profile')}</h3>
+        {/* Download CV */}
+        <div className="flex flex-col gap-3 w-full">
+          <a
+            href="/assets/Leon Hauck - Perfil - Portugues.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Leon Hauck - Perfil - Portugues.pdf"
+            className="btn-primary w-full py-3.5 text-xs group"
+          >
+            <span className="material-symbols-outlined text-[20px] group-hover:animate-bounce">download</span>
+            {t('about.downloadCvPt')}
+          </a>
+          <a
+            href="/assets/Leon Hauck - Profile - English.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Leon Hauck - Profile - English.pdf"
+            className="btn-ghost w-full py-3.5 text-xs group"
+          >
+            <span className="material-symbols-outlined text-[20px] group-hover:animate-bounce">download</span>
+            {t('about.downloadCvEn')}
+          </a>
         </div>
-        <p className="text-slate-600 dark:text-text-secondary leading-relaxed text-sm font-body whitespace-pre-line">
-          {t('about.bio')}
-        </p>
-      </section>
+      </aside>
 
-      {/* Experience Timeline */}
-      <section className="relative">
-        <h3 className="text-lg font-bold mb-6 px-1">{t('about.journey')}</h3>
-        <div className="relative space-y-8 pl-2">
-          <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-black/10 dark:bg-white/10 rounded-full"></div>
-          {experiences.map((exp) => (
-            <div key={exp.id} className="relative pl-8 group">
-              <div className={`absolute left-0 top-1.5 rounded-full border-[4px] border-background-light dark:border-background-dark z-10 transition-all ${exp.isCurrent ? 'size-[24px] bg-primary' : 'size-[16px] left-[4px] bg-slate-300 dark:bg-zinc-700'
-                }`} />
-              <div className="flex flex-col gap-1">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
-                  <h4 className={`text-base font-bold sm:flex-1 sm:min-w-0 sm:pr-3 ${exp.isCurrent ? 'text-primary dark:text-white' : 'text-slate-500 dark:text-text-secondary'}`}>{exp.role}</h4>
-                  <span className="text-[10px] font-mono font-medium text-primary mt-1 sm:shrink-0 sm:whitespace-nowrap">{exp.period}</span>
+      <div className="flex flex-col gap-10 min-w-0">
+        {/* Bio */}
+        <section className="panel p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="material-symbols-outlined text-primary-light text-xl">fingerprint</span>
+            <h2 className="text-lg font-bold tracking-tight">{t('about.profile')}</h2>
+          </div>
+          <p className="text-slate-300 leading-relaxed text-sm font-body whitespace-pre-line">
+            {t('about.bio')}
+          </p>
+        </section>
+
+        {/* Experience Timeline */}
+        <section className="relative">
+          <h2 className="flex items-center gap-2 text-lg font-bold mb-6 px-1">
+            <span className="material-symbols-outlined text-primary-light text-xl">timeline</span>
+            {t('about.journey')}
+          </h2>
+          <div className="relative space-y-8 pl-2">
+            <div className="absolute left-[11px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-matrix/70 via-primary/30 to-border-dark rounded-full"></div>
+            {experiences.map((exp) => (
+              <div key={exp.id} className="relative pl-8 group">
+                <div className={`absolute left-0 top-1.5 rounded-full border-[4px] border-background-dark z-10 transition-all ${exp.isCurrent ? 'size-[24px] bg-matrix shadow-glow' : 'size-[16px] left-[4px] bg-zinc-600 group-hover:bg-primary'
+                  }`} />
+                <div className="flex flex-col gap-1">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                    <h3 className={`text-base font-bold sm:flex-1 sm:min-w-0 sm:pr-3 ${exp.isCurrent ? 'text-white' : 'text-slate-300'}`}>{exp.role}</h3>
+                    <span className="text-[11px] font-mono font-medium text-primary-light mt-1 sm:shrink-0 sm:whitespace-nowrap">{exp.period}</span>
+                  </div>
+                  <p className="text-sm font-semibold text-white/80">{exp.company}</p>
+                  {exp.description && (
+                    <p className="text-sm text-text-secondary mt-1 leading-relaxed">{exp.description}</p>
+                  )}
+                  {exp.highlights && (
+                    <ul className="mt-2 space-y-2">
+                      {exp.highlights.map((highlight) => (
+                        <li key={highlight} className="flex gap-2.5 text-sm text-text-secondary leading-relaxed">
+                          <span className="mt-[0.55em] size-1.5 shrink-0 rotate-45 bg-primary-light" />
+                          <span>{renderBold(highlight)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <p className="text-sm font-semibold opacity-80">{exp.company}</p>
-                <p className="text-xs text-slate-500 dark:text-text-secondary mt-1 leading-relaxed">{exp.description}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Download CV */}
-      <div className="flex flex-col gap-4 mb-8">
-        <a
-          href="/assets/Leon Hauck - Perfil - Portugues.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download="Leon Hauck - Perfil - Portugues.pdf"
-          className="w-full bg-primary text-white font-bold py-4 rounded shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-3 group"
-        >
-          <span className="material-symbols-outlined group-hover:animate-bounce">download</span>
-          {t('about.downloadCvPt')}
-        </a>
-        <a
-          href="/assets/Leon Hauck - Profile - English.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download="Leon Hauck - Profile - English.pdf"
-          className="w-full bg-slate-800 dark:bg-zinc-800 text-white font-bold py-4 rounded shadow-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-3 group"
-        >
-          <span className="material-symbols-outlined group-hover:animate-bounce">download</span>
-          {t('about.downloadCvEn')}
-        </a>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
 
