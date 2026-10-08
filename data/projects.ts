@@ -16,6 +16,26 @@ import { ProjectEntry } from '../types';
 
 export const projects: ProjectEntry[] = [
     {
+        title: 'ConectaStore',
+        category: 'backend',
+        description: {
+            pt: 'Motor de recomendação de produtos para e-commerce, escrito 100% em Rust e sem dependências externas. O histórico de compras é modelado como um grafo de clientes e produtos, e uma busca em largura (BFS) limitada a três níveis encontra clientes com gostos parecidos para sugerir o que eles compraram e o cliente ainda não tem — um filtro colaborativo. Usa lista de adjacência com HashMap, fila VecDeque e HashSet para evitar ciclos e itens repetidos, com memória proporcional às conexões reais. Coberto por testes de integração.',
+            en: 'Product recommendation engine for e-commerce, written 100% in Rust with no external dependencies. Purchase history is modeled as a graph of customers and products, and a breadth-first search (BFS) limited to three levels finds customers with similar taste to suggest what they bought and the customer does not have yet — collaborative filtering. It uses a HashMap adjacency list, a VecDeque queue, and a HashSet to avoid cycles and repeated items, keeping memory proportional to the actual connections. Covered by integration tests.',
+        },
+        tech: ['Rust', 'Cargo', 'BFS', 'HashMap', 'VecDeque', 'HashSet'],
+        imageUrl: '/assets/conectastore-grafo.webp',
+        isFeatured: false,
+        impact: { pt: 'Recomendações em menos de 1 ms por consulta', en: 'Recommendations in under 1 ms per query' },
+        version: 'v0.1.0',
+        updatedAt: '2026-10-07',
+        githubUrl: 'https://github.com/LeonHauck/ConectaStore',
+        linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+        gallery: [
+            '/assets/conectastore-grafo.webp',
+            '/assets/conectastore-codigo.webp',
+        ],
+    },
+    {
         title: { pt: 'Projeto de Portfolio v4.0', en: 'Portfolio Project v4.0' },
         category: 'web',
         description: {
