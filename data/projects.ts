@@ -16,6 +16,30 @@ import { ProjectEntry } from '../types';
 
 export const projects: ProjectEntry[] = [
     {
+        title: { pt: 'Gestão de Veículos', en: 'Vehicle Management' },
+        category: 'backend',
+        description: {
+            pt: 'Sistema de gestão de estoque de veículos para concessionárias, desenvolvido como trabalho acadêmico da faculdade para aplicar Programação Orientada a Objetos, APIs RESTful e persistência de dados. Permite cadastrar, consultar, atualizar e remover veículos, marcas e modelos, com controle de cor, ano, preço, quilometragem e status (Disponível, Vendido, Descontinuado). A API em Spring Boot é organizada em camadas (model, repository, service e controller) e oferece filtros combináveis por marca, modelo, ano, preço máximo e status, com JPA Specifications. Inclui uma interface web simples em HTML, CSS e JavaScript para operar o sistema.',
+            en: 'Vehicle inventory management system for car dealerships, built as a college assignment to apply Object-Oriented Programming, RESTful APIs, and data persistence. It supports creating, reading, updating, and deleting vehicles, brands, and models, tracking color, year, price, mileage, and status (Available, Sold, Discontinued). The Spring Boot API is organized in layers (model, repository, service, and controller) and offers combinable filters by brand, model, year, maximum price, and status, using JPA Specifications. It includes a simple web interface in HTML, CSS, and JavaScript to operate the system.',
+        },
+        tech: ['Java 17', 'Spring Boot', 'Spring Data JPA', 'Hibernate', 'MySQL', 'Maven', 'Lombok'],
+        imageUrl: '/assets/gestaoveiculos_capa.webp',
+        isFeatured: false,
+        version: 'v0.0.1',
+        updatedAt: '2026-10-10',
+        githubUrl: 'https://github.com/LeonHauck/GestaoVeiculos',
+        linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+        gallery: [
+            '/assets/gestaoveiculos_sistema.webp',
+            '/assets/gestaoveiculos_filtros.webp',
+            '/assets/gestaoveiculos_banco.webp',
+            '/assets/gestaoveiculos_veiculo.webp',
+            '/assets/gestaoveiculos_controller.webp',
+            '/assets/gestaoveiculos_service.webp',
+            '/assets/gestaoveiculos_specification.webp',
+        ],
+    },
+    {
         title: 'ConectaStore',
         category: 'backend',
         description: {
