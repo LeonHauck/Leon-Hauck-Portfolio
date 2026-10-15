@@ -132,7 +132,7 @@ Cada item é cadastrado **uma única vez** e aparece em português e inglês. N�
     tech: ['React', 'TypeScript'],
     imageUrl: '/assets/meu-projeto.webp',  // capa do card
     isFeatured: false,                     // true mostra o selo "Destaque" (use em poucos)
-    impact: { pt: '166 lojas · 7 redes', en: '166 stores · 7 retail chains' },  // opcional: resultado em número, em verde no card
+    impact: { pt: '170 lojas · 7 redes', en: '170 stores · 7 retail chains' },  // opcional: resultado em número, em verde no card
     liveUrl: 'https://meu-projeto.com.br', // opcional: mostra o botão "Ver ao vivo"
     version: 'v1.0.0',
     updatedAt: '2026-10-05',               // sempre AAAA-MM-DD

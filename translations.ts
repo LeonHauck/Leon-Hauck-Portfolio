@@ -57,7 +57,7 @@ export const translations = {
                     period: 'mai/2026 — Presente',
                     highlights: [
                         'Desenvolvi o portal de pedidos de **40+ representantes** (100 a 120 pedidos/mês), integrado ao ERP Senior via APIs.',
-                        'Criei o sistema de trade marketing (**166 lojas, 7 redes**, ~R$ 30 mil/mês), com rotas no Google Maps e gestão de rupturas.',
+                        'Criei o sistema de trade marketing (**170 lojas, 7 redes**, ~R$ 30 mil/mês), com rotas no Google Maps e gestão de rupturas.',
                         'Desenvolvi o controle de verbas com aprovação dos gestores, que acompanha cerca de **R$ 50 mil/mês** em ações comerciais.',
                         'Automatizei o cadastro de fornecedores com consulta de CNPJ via API e aviso por e-mail a todos os setores envolvidos.',
                         'Criei jogos para feiras e eventos, com **1.000+ participantes**, em JavaScript, PHP, Electron e Web Audio API.',
@@ -212,7 +212,7 @@ export const translations = {
                     period: 'May 2026 — Present',
                     highlights: [
                         'Built the sales order portal for **40+ sales reps** (100–120 orders/month), integrated with the Senior ERP via APIs.',
-                        'Built the trade marketing system (**166 stores, 7 retail chains**, ~R$30k/month) with Google Maps routing and out-of-stock tracking.',
+                        'Built the trade marketing system (**170 stores, 7 retail chains**, ~R$30k/month) with Google Maps routing and out-of-stock tracking.',
                         'Developed the marketing budget control with manager approval, tracking about **R$50k/month** in commercial actions.',
                         'Automated supplier registration with company ID (CNPJ) lookup via API and email alerts to every department involved.',
                         'Created event games played by **1,000+ people** at trade shows, using JavaScript, PHP, Electron, and Web Audio API.',

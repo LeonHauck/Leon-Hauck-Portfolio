@@ -10,7 +10,7 @@ import { ProjectEntry } from '../types';
 //   (para criar outra, adicione uma linha em projects.categories no translations.ts, em pt e en)
 // - updatedAt: sempre 'AAAA-MM-DD'. O site formata a data em cada idioma e ordena do mais novo para o mais antigo
 // - isFeatured: true mostra o selo "Destaque" (use em poucos, senão o selo perde o sentido)
-// - impact (opcional): um resultado em número, mostrado em verde no card. Ex.: impact: { pt: '166 lojas', en: '166 stores' }
+// - impact (opcional): um resultado em número, mostrado em verde no card. Ex.: impact: { pt: '170 lojas', en: '170 stores' }
 // - liveUrl (opcional): link do projeto no ar; mostra o botão "Ver ao vivo" sobre a imagem
 // - gallery, githubUrl e linkedinUrl são opcionais
 
@@ -283,21 +283,28 @@ export const projects: ProjectEntry[] = [
             en: 'The project is a robust web Dashboard that centralizes all commercial visit management, stockout monitoring, and performance data analysis in retail chains.',
         },
         tech: ['HTML', 'CSS', 'Vanilla JS', 'Chart.js', 'PHP 7.4+', 'REST API', 'PWA'],
-        imageUrl: '/assets/Login.webp',
+        imageUrl: '/assets/trade-marketing-00-login.webp',
         isFeatured: true,
-        impact: { pt: '166 lojas · 7 redes · ~R$ 30 mil/mês', en: '166 stores · 7 retail chains · ~R$30k/month' },
+        impact: { pt: '170 lojas · 7 redes · ~R$ 30 mil/mês', en: '170 stores · 7 retail chains · ~R$30k/month' },
         version: 'v1.0.0',
         updatedAt: '2026-06-30',
         githubUrl: 'https://github.com/LeonHauck/Trade-Marketing-HiperRoll',
         linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7469903348314595328/',
         gallery: [
-            '/assets/Login.webp',
-            '/assets/Dashboard.webp',
-            '/assets/Historico.webp',
-            '/assets/Lojas.webp',
-            '/assets/Pdf.webp',
-            '/assets/Produtos.webp',
-            '/assets/Rupturas.webp',
+            '/assets/trade-marketing-00-login.webp',
+            '/assets/trade-marketing-01-dashboard.webp',
+            '/assets/trade-marketing-02-lojas.webp',
+            '/assets/trade-marketing-03-produtos.webp',
+            '/assets/trade-marketing-04-historico-visitas.webp',
+            '/assets/trade-marketing-05-filtro-por-produto.webp',
+            '/assets/trade-marketing-06-detalhes-da-visita.webp',
+            '/assets/trade-marketing-07-registrar-visita.webp',
+            '/assets/trade-marketing-08-rotas.webp',
+            '/assets/trade-marketing-09-rupturas.webp',
+            '/assets/trade-marketing-10-pedidos.webp',
+            '/assets/trade-marketing-11-editar-pedido.webp',
+            '/assets/trade-marketing-12-usuarios.webp',
+            '/assets/trade-marketing-13-auditoria.webp',
         ],
     },
     {
