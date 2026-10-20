@@ -238,7 +238,18 @@ const Projects: React.FC = () => {
                       </span>
                     </span>
                   ) : (
-                    <img src={media} loading="lazy" decoding="async" className="w-full h-full object-cover" alt={`${t('projects.galleryTitle')} ${idx + 1}`} />
+                    <img
+                      src={media}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover"
+                      alt={`${t('projects.galleryTitle')} ${idx + 1}`}
+                      // Phone screenshots are taller than the landscape thumbnail: show them whole instead of a middle strip
+                      onLoad={(e) => {
+                        const img = e.currentTarget;
+                        if (img.naturalHeight > img.naturalWidth) img.classList.replace('object-cover', 'object-contain');
+                      }}
+                    />
                   )}
                   <span className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                     <span className="material-symbols-outlined text-white opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 transition-all">fullscreen</span>
