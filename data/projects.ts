@@ -16,6 +16,35 @@ import { ProjectEntry } from '../types';
 
 export const projects: ProjectEntry[] = [
     {
+        title: { pt: 'Almanaque das Copas', en: 'World Cup Almanac' },
+        category: 'data',
+        description: {
+            pt: 'Site com toda a história da Copa do Mundo, de 1930 a 2026: cada jogo, cada gol e cada campeão. Scripts em Python transformam bases públicas de dados (The Fjelstul World Cup Database e openfootball) em arquivos JSON, e o site, feito em JavaScript puro numa página única com rotas, monta as telas a partir deles. Cada edição tem jogos, chaveamento, grupos, artilharia, prêmios e estádios; cada jogo tem gols e cartões minuto a minuto, disputa de pênaltis e escalações. Traz a trajetória das 88 seleções, o ranking dos 1.543 goleadores com busca e filtros, a ficha de cada jogador, um mapa interativo com os 208 estádios, uma página de recordes e gráficos em SVG. Tem busca rápida pelo atalho "/", funciona no celular e está publicado no GitHub Pages.',
+            en: 'A website with the full history of the FIFA World Cup, from 1930 to 2026: every match, every goal, and every champion. Python scripts turn public datasets (The Fjelstul World Cup Database and openfootball) into JSON files, and the site, built in plain JavaScript as a single-page app with routes, renders every screen from them. Each tournament has its matches, knockout bracket, groups, top scorers, awards, and stadiums; each match has minute-by-minute goals and cards, penalty shootouts, and line-ups. It covers the history of all 88 national teams, a ranking of the 1,543 goal scorers with search and filters, a profile for each player, an interactive map of the 208 stadiums, a records page, and SVG charts. It has quick search with the "/" shortcut, works on mobile, and is published on GitHub Pages.',
+        },
+        tech: ['HTML', 'CSS', 'Vanilla JS', 'Python', 'Leaflet', 'SVG', 'GitHub Pages'],
+        imageUrl: '/assets/almanaque-copas-01-inicio.webp',
+        isFeatured: false,
+        impact: { pt: '23 Copas · 1.068 jogos · 3.028 gols', en: '23 World Cups · 1,068 matches · 3,028 goals' },
+        liveUrl: 'https://leonhauck.github.io/AlmanaqueDasCopas/',
+        version: 'v1.0.0',
+        updatedAt: '2026-10-27',
+        githubUrl: 'https://github.com/LeonHauck/AlmanaqueDasCopas',
+        linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+        gallery: [
+            '/assets/almanaque-copas-01-inicio.webp',
+            '/assets/almanaque-copas-02-campeoes.webp',
+            '/assets/almanaque-copas-03-copa-2026.webp',
+            '/assets/almanaque-copas-04-chaveamento.webp',
+            '/assets/almanaque-copas-05-final.webp',
+            '/assets/almanaque-copas-06-selecao.webp',
+            '/assets/almanaque-copas-07-artilheiros.webp',
+            '/assets/almanaque-copas-08-estadios.webp',
+            '/assets/almanaque-copas-09-recordes.webp',
+            '/assets/almanaque-copas-10-celular.webp',
+        ],
+    },
+    {
         title: { pt: 'Gestão de Veículos', en: 'Vehicle Management' },
         category: 'backend',
         description: {
