@@ -16,6 +16,36 @@ import { ProjectEntry } from '../types';
 
 export const projects: ProjectEntry[] = [
     {
+        title: { pt: 'App ArtExtreme Tattoo Studio', en: 'ArtExtreme Tattoo Studio App' },
+        category: 'systems',
+        description: {
+            pt: 'App de orçamento e agendamento para a ArtExtreme, estúdio de tatuagem de Juiz de Fora. O cliente marca um ou mais locais num corpo 3D interativo com visual neon (gerado por código, com shader próprio), escolhe tamanho, estilo e cor e vê na hora uma faixa de valor calculada pela tabela do tatuador; depois escolhe um horário realmente livre, e o pedido chega pronto no WhatsApp do estúdio. No painel do artista há agenda em tempo real com notificação no celular a cada pedido novo, mensagens de WhatsApp com um toque para pedir sinal, confirmar ou concluir, tabela de preços 100% editável, portfólio gerenciado pelo celular e relatórios de faturamento, clientes, estilos e locais por mês e por ano. Instala como app no Android e no iPhone (PWA) e usa Supabase com Row Level Security e trava de horário no próprio banco para que dois clientes não reservem o mesmo horário.',
+            en: 'A quoting and booking app for ArtExtreme, a tattoo studio in Juiz de Fora, Brazil. The client marks one or more spots on an interactive 3D body with a neon look (generated in code, with a custom shader), picks size, style, and color, and instantly sees a price range calculated from the artist\'s own price table; then they choose a slot that is actually free, and the request arrives ready-made in the studio\'s WhatsApp. The artist\'s dashboard has a real-time schedule with phone notifications for every new request, one-tap WhatsApp messages to ask for a deposit, confirm, or wrap up a session, a fully editable price table, a portfolio managed from the phone, and monthly and yearly reports on revenue, clients, styles, and body areas. It installs as an app on Android and iPhone (PWA) and runs on Supabase with Row Level Security and a booking lock in the database itself, so two clients can never take the same slot.',
+        },
+        tech: ['React', 'TypeScript', 'Three.js', 'Tailwind CSS', 'Vite', 'Supabase', 'PWA'],
+        imageUrl: '/assets/artextreme-home.webp',
+        isFeatured: false,
+        impact: { pt: 'Orçamento em 3D na hora e agendamento online', en: 'Instant 3D quotes and online booking' },
+        liveUrl: 'https://artextreme.vercel.app/',
+        version: 'v7.0.0',
+        updatedAt: '2026-10-28',
+        githubUrl: 'https://github.com/LeonHauck/ArtExtreme',
+        linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+        gallery: [
+            '/assets/artextreme-demo-computador.mp4',
+            '/assets/artextreme-simulador.webp',
+            '/assets/artextreme-simulador-mobile.webp',
+            '/assets/artextreme-home.webp',
+            '/assets/artextreme-artista.webp',
+            '/assets/artextreme-portfolio.webp',
+            '/assets/artextreme-relatorios.webp',
+            '/assets/artextreme-relatorios-mobile.webp',
+            '/assets/artextreme-relatorios-estilos.webp',
+            '/assets/artextreme-home-tablet.webp',
+            '/assets/artextreme-painel-estilos-mobile.webp',
+        ],
+    },
+    {
         title: { pt: 'Almanaque das Copas', en: 'World Cup Almanac' },
         category: 'data',
         description: {
