@@ -18,6 +18,7 @@ export interface ProjectEntry {
   isFeatured?: boolean;
   impact?: Localized; // a measurable result, shown highlighted on the card
   liveUrl?: string; // where the project can be used right now
+  coverVideo?: string; // optional short muted loop played on the card (imageUrl is its poster)
   githubUrl?: string;
   linkedinUrl?: string;
   gallery?: string[];
@@ -46,6 +47,7 @@ export interface Project {
   impact?: string;
   status?: 'active' | 'legacy' | 'research';
   liveUrl?: string;
+  coverVideo?: string;
   githubUrl?: string;
   linkedinUrl?: string;
   gallery?: string[];

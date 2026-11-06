@@ -1,10 +1,34 @@
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useLanguage } from '../components/LanguageContext';
 import { getProjects } from '../data';
 import { Project } from '../types';
 
 const isVideo = (media: string) => media.toLowerCase().endsWith('.mp4');
+
+const coverClass = 'w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105';
+
+// Card cover: the image, or a short muted loop when the project has one. The loop only downloads and plays
+// while the card is on screen, and people who ask the system for reduced motion see the still image.
+const CardCover: React.FC<{ image: string; video?: string; alt: string }> = ({ image, video, alt }) => {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [reducedMotion] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  const playLoop = Boolean(video) && !reducedMotion;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!playLoop || !el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) el.play().catch(() => { /* autoplay refused: the poster stays */ });
+      else el.pause();
+    }, { threshold: 0.25 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [playLoop]);
+
+  if (!playLoop) return <img src={image} alt={alt} loading="lazy" decoding="async" className={coverClass} />;
+  return <video ref={ref} src={video} poster={image} muted loop playsInline preload="none" aria-label={alt} className={coverClass} />;
+};
 
 const Projects: React.FC = () => {
   const { t, language } = useLanguage();
@@ -87,13 +111,7 @@ const Projects: React.FC = () => {
             >
               <div className="relative h-48 overflow-hidden bg-background-dark">
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/30 to-transparent z-10" />
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                />
+                <CardCover image={project.imageUrl} video={project.coverVideo} alt={project.title} />
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
