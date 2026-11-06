@@ -112,16 +112,31 @@ const Projects: React.FC = () => {
               <div className="relative h-48 overflow-hidden bg-background-dark">
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-black/30 to-transparent z-10" />
                 <CardCover image={project.imageUrl} video={project.coverVideo} alt={project.title} />
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-3 right-3 z-20 flex items-center gap-1 rounded bg-matrix px-2.5 py-1 text-[10px] font-bold uppercase text-background-dark shadow-glow-sm transition-colors hover:bg-white"
-                  >
-                    <span className="material-symbols-outlined text-[14px]">play_arrow</span>
-                    {t('projects.viewLive')}
-                  </a>
+                {(project.liveUrl || project.downloadUrl) && (
+                  <div className="absolute top-3 right-3 z-20 flex gap-2">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 rounded bg-matrix px-2.5 py-1 text-[10px] font-bold uppercase text-background-dark shadow-glow-sm transition-colors hover:bg-white"
+                      >
+                        <span className="material-symbols-outlined text-[14px]">play_arrow</span>
+                        {t('projects.viewLive')}
+                      </a>
+                    )}
+                    {project.downloadUrl && (
+                      <a
+                        href={project.downloadUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 rounded border border-matrix/60 bg-background-dark/80 px-2.5 py-1 text-[10px] font-bold uppercase text-matrix backdrop-blur-sm transition-colors hover:bg-matrix hover:text-background-dark"
+                      >
+                        <span className="material-symbols-outlined text-[14px]">download</span>
+                        {t('projects.download')}
+                      </a>
+                    )}
+                  </div>
                 )}
                 <div className="absolute bottom-3 left-4 right-4 z-20">
                   <div className="flex gap-2 mb-1.5">

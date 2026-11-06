@@ -12,6 +12,7 @@ import { ProjectEntry } from '../types';
 // - isFeatured: true mostra o selo "Destaque" (use em poucos, senão o selo perde o sentido)
 // - impact (opcional): um resultado em número, mostrado em verde no card. Ex.: impact: { pt: '170 lojas', en: '170 stores' }
 // - liveUrl (opcional): link do projeto no ar; mostra o botão "Ver ao vivo" sobre a imagem
+// - downloadUrl (opcional): link para baixar (ex.: a release no GitHub); mostra o botão "Baixar"
 // - gallery, githubUrl e linkedinUrl são opcionais
 
 export const projects: ProjectEntry[] = [
@@ -25,6 +26,8 @@ export const projects: ProjectEntry[] = [
         tech: ['Unity 6', 'C#', 'Python', 'Pixel Art'],
         imageUrl: '/assets/ecobot-capa.webp',
         coverVideo: '/assets/ecobot-capa.mp4',
+        liveUrl: 'https://leonhauck.github.io/Ecobot/',
+        downloadUrl: 'https://github.com/LeonHauck/Ecobot/releases/tag/v1.0.0',
         isFeatured: false,
         impact: { pt: '4 fases · pixel art e trilha geradas por código', en: '4 levels · pixel art and soundtrack generated in code' },
         version: 'v1.0.0',
