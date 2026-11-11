@@ -33,7 +33,7 @@ export const projects: ProjectEntry[] = [
         version: 'v1.0.0',
         updatedAt: '2026-11-05',
         githubUrl: 'https://github.com/LeonHauck/Ecobot',
-        linkedinUrl: 'https://www.linkedin.com/in/leon-hauck/',
+        linkedinUrl: 'https://www.linkedin.com/feed/update/urn:li:activity:7525955435435073536/',
         gallery: [
             '/assets/EcoBot_Trailer_1080p.mp4',
             '/assets/ecobot-01-menu.webp',
