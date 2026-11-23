@@ -10,7 +10,7 @@ import { ProjectEntry } from '../types';
 //   (para criar outra, adicione uma linha em projects.categories no translations.ts, em pt e en)
 // - updatedAt: sempre 'AAAA-MM-DD'. O site formata a data em cada idioma e ordena do mais novo para o mais antigo
 // - isFeatured: true mostra o selo "Destaque" (use em poucos, senão o selo perde o sentido)
-// - impact (opcional): um resultado em número, mostrado em verde no card. Ex.: impact: { pt: '170 lojas', en: '170 stores' }
+// - impact (opcional): um resultado em número, mostrado em verde no card. Ex.: impact: { pt: '171 lojas', en: '171 stores' }
 // - liveUrl (opcional): link do projeto no ar; mostra o botão "Ver ao vivo" sobre a imagem
 // - downloadUrl (opcional): link para baixar (ex.: a release no GitHub); mostra o botão "Baixar"
 // - gallery, githubUrl e linkedinUrl são opcionais
@@ -74,6 +74,12 @@ export const projects: ProjectEntry[] = [
             '/assets/artextreme-relatorios.webp',
             '/assets/artextreme-relatorios-mobile.webp',
             '/assets/artextreme-relatorios-estilos.webp',
+            '/assets/artextreme-promo-temas.webp',
+            '/assets/artextreme-promo-popup-mobile.webp',
+            '/assets/artextreme-promo-agenda-cupom-mobile.webp',
+            '/assets/artextreme-promo-painel-popup.webp',
+            '/assets/artextreme-agenda-calendario.webp',
+            '/assets/artextreme-agenda-calendario-mobile.webp',
             '/assets/artextreme-home-tablet.webp',
             '/assets/artextreme-painel-estilos-mobile.webp',
         ],
@@ -404,7 +410,7 @@ export const projects: ProjectEntry[] = [
         tech: ['HTML', 'CSS', 'Vanilla JS', 'Chart.js', 'PHP 7.4+', 'REST API', 'PWA'],
         imageUrl: '/assets/trade-marketing-00-login.webp',
         isFeatured: true,
-        impact: { pt: '170 lojas · 7 redes · ~R$ 30 mil/mês', en: '170 stores · 7 retail chains · ~R$30k/month' },
+        impact: { pt: '171 lojas · 7 redes · ~R$ 30 mil/mês', en: '171 stores · 7 retail chains · ~R$30k/month' },
         version: 'v1.0.0',
         updatedAt: '2026-06-30',
         githubUrl: 'https://github.com/LeonHauck/Trade-Marketing-HiperRoll',
